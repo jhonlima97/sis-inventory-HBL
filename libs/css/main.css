@@ -1,0 +1,55 @@
+#bienvenida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; 
+}
+
+#bienvenida h1{
+  position: relative;
+  bottom: 50px;
+}
+
+#bienvenida .informatica {
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(43, 134, 165);
+    color: white;
+    font-size: 29px;
+    font-weight: bold;
+    padding: 1px;
+}
+#bienvenida img{
+  position: relative;
+  top: 50px;
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
+
+
+.etiqueta-inventario {
+  text-align: center;
+  font-size: 45px;
+  position: relative;
+  top: 160px;
+  left: 50px;
+}
+
+.contenedor-celeste {
+  background-color: rgb(39, 118, 145); 
+  padding: -20px; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  color: #ffffff;
+}
+
+.img-inventario {
+  align-items: center;
+  position: relative;
+  left: 450px;
+  bottom: 150px;
+}

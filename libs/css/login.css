@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-wallpaper {
+    background: #757F9A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #D7DDE8, #757F9A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    display: flex;
+    height: 500px; /* Altura ajustada */
+    max-width: 800px; /* Ancho máximo ajustado */
+    margin: auto;
+    margin-top: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: whitesmoke;
+    justify-content: center;
+    flex: 1; 
+    padding: 20px;
+}
+
+.form h2 {
+    font-size: 2rem;
+    margin: 40px 0; /* Ajuste del margen vertical */
+}
+
+.input {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 15px 0;
+    border-radius: 45px;
+    border: 1px solid #ccc;
+    transition: box-shadow 0.3s ease-in-out;
+    position: relative; /* Agregado: posición relativa */
+}
+
+
+.input:focus {
+    box-shadow: 0 0 10px 2px #007bff;
+    outline: none;
+}
+
+
+.side {
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.side video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.view {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Estilos para el contenedor del campo de contraseña y el ícono de ver contraseña */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
