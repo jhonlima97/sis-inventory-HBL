@@ -1,12 +1,12 @@
 <?php
 
 class conexionBD {
-    private $host     = 'localhost';
-    private $dbName   = 'inventario_belen';
-    private $user     = 'root';
-    private $password = 'ADMINPHP'; // Aquí va tu contraseña de MySQL
+   
+    private $host = 'tu-host';
+    private $dbName = 'tu-bdname';
+    private $user = 'tu-user';
+    private $password = 'tu-pass'; // Aquí va tu contraseña de MySQL
     private $pdo;
-      
     function conexion() {
         try {
             $this->pdo = new PDO(
