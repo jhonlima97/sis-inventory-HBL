@@ -186,6 +186,15 @@ if ($pdo) {
                   </a>
                 </li>
               </ul>
+
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../views/index.php?view=graficos" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Gráficos</p>
+                  </a>
+                </li>
+              </ul>
           </li>
         </ul>
       </nav>
