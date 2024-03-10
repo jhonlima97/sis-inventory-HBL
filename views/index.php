@@ -14,10 +14,10 @@ if (!isset($_SESSION['S_ID'])) {
   if (isset($_GET['view'])) {
     $view = $_GET['view'];
     switch ($view) {
-      case 'index':
-        $pageTitle = 'Index';
+      case 'graficos':
+        $pageTitle = 'Graficos';
         include_once "../includes/header.php";
-        include('index.php');
+        include('graficos.php');
         break;
       case 'areas':
         $pageTitle = 'Areas';
@@ -59,8 +59,8 @@ if (!isset($_SESSION['S_ID'])) {
         include_once "../includes/header.php";
         include('equipo/perifericos.php');
       break;
-      case 'reportes':
-        $pageTitle = 'Reportes';
+      case 'patrimonio':
+        $pageTitle = 'Patrimonio';
         include_once "../includes/header.php";
         include('reporte/reportes.php');
       break;
@@ -80,36 +80,30 @@ if (!isset($_SESSION['S_ID'])) {
         break;
     }
   } else {
-    $pageTitle = 'SIS INVENTARIO';
-    include_once "../includes/header.php";
+  $pageTitle = 'SIS INVENTARIO';
+  include_once "../includes/header.php"; 
+
     // Aquí va el contenido por defecto si no se especifica una vista
-    ?>
+  ?>
+  <!-- Contenido del Dashboard -->
+  <body>
+      <div class="col-md-4">
+          <h2 class="etiqueta-inventario">
+              Bienvenido a <br>
+              <span class="contenedor-celeste">Belen Informatics</span>
+          </h2>         
+      </div> 
+      <div class="col-md-4">               
+          <img class="img-inventario"  src="../libs/images/hospital_inventario.png">                   
+      </div> 
+  </body>
 
-    <head>
-        <link rel="stylesheet" href="../libs/css/main.css">
-    </head>
-    <body>
-        <div class="col-md-4">
-            <h2 class="etiqueta-inventario">
-                Bienvenido a <br>
-                <span class="contenedor-celeste">Belen Informatics</span>
-            </h2>         
-        </div> 
-        <div class="col-md-4">               
-            <img class="img-inventario"  src="../libs/images/hospital_inventario.png">                   
-        </div> 
-            
-    </body>
-
-
-
-    <?php
+  <?php
 
 }
   
   include_once "../includes/menu.php";
   ?>
-
 
 </div>
   

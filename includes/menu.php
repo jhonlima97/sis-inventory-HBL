@@ -43,6 +43,7 @@ if ($pdo) {
       <img src="../libs/images/hospital.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
       <span class="brand-text font-weight-light"><b>SIS</b> INVENTARIO <b>HBL</b></span>
     </a>
+    
 
     <!-- Perfil de usuario -->
     <div class="sidebar">
@@ -51,8 +52,9 @@ if ($pdo) {
             <img src="../libs/images/user.png" class="img-circle" style="height:35px; width:35px;" alt="User Image">
         </div>
         <div class="info">
-            <a href="#" class="d-block" id="nombreUsuario"><?php echo $nombre_usuario; ?></a>
-            <a href="../controllers/usuario/logout.php" id="cerrarSesionBtn" class="btn btn-success mt-2" style="display: none; color:#ffffff;">Cerrar Sesión</a>
+            <a class="d-block" id="nombreUsuario" style="text-decoration: none;"><?php echo $nombre_usuario; ?></a>
+            <a href="../controllers/usuario/logout.php" id="cerrarSesionBtn" class="btn btn-warning mt-2" 
+            style="display: none; color:black; font-weight:bolder">Cerrar Sesión</a>
         </div>
       </div>
 
@@ -169,7 +171,7 @@ if ($pdo) {
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../views/index.php?view=reportes" class="nav-link">
+                  <a href="../views/index.php?view=patrimonio" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Patrimonio</p>
                   </a>
@@ -205,7 +207,7 @@ if ($pdo) {
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="../views/index.php?view=reportes" class="nav-link">
+                  <a href="../views/index.php?view=patrimonio" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Patrimonio</p>
                   </a>

@@ -42,19 +42,16 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js"></script>
 
 <!-- Agrega los scripts de jQuery, DataTables y Bootstrap -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-e4PSwN/ju8q6J6Gz9vuG6OOfiiXaN7HaR8oh1eY8rP2T3az5jlNYtf8bx1iZDzZ" crossorigin="anonymous"></script> -->
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-
 
 <!-- CDN de select2 -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+
+
 <!-- LLamo a mis js de mis tablas -->
 <script src="../libs/js/usuario.js?rev=<?php echo time(); ?>"></script>
-
 <script src="../libs/js/areas.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/computadoras.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/impresoras.js?rev=<?php echo time(); ?>"></script>
@@ -62,10 +59,7 @@
 <script src="../libs/js/scanners.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/switches.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/perifericos.js?rev=<?php echo time(); ?>"></script>
-
 <script src="../libs/js/reportes.js?rev=<?php echo time(); ?>"></script>
-<!--<script src="../libs/js/desplazamientos.js?rev=<?php echo time(); ?>"></script>-->
-
 
 <script>
   // Carga el select2 de la tabla Usuario
@@ -85,7 +79,7 @@
     listar_perifericos();
     //desplzamientos
     //listar_asignaciones();
-    // Inicializa el DataTable vacio en la vista reportes
+    // Inicializa el DataTable vacio en la vista del reporte Patrimonio
     getTabla('');
     //getTabladetalle();
     //listar_detalle_desplazamiento();

@@ -59,7 +59,10 @@
         <a href="../views/index.php" class="nav-link"><b>Página Principal</b></a>
       </li>
       <li class="nav-item">
-        <a href="../views/index.php?view=reportes" class="nav-link"><b>Reportes</b></a>
+        <a href="../views/index.php?view=patrimonio" class="nav-link"><b>Reportes</b></a>
+      </li>
+      <li class="nav-item">
+        <a href="../views/index.php?view=graficos" class="nav-link"><b>Gráficos</b></a>
       </li>
     </ul>
 
