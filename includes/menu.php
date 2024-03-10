@@ -1,4 +1,5 @@
 <?php
+
 include_once "../models/conexionbd.php";
 
 // Crear una instancia de la clase de conexión
@@ -13,10 +14,6 @@ if ($pdo) {
     // Obtener el ID del usuario logueado (suponiendo que está almacenado en $_SESSION)
     $usuario_id = $_SESSION['S_ID'];
     $usuario_rol = $_SESSION['S_ROL'];
-
-    // $usuario_id = isset($_SESSION['S_ID']) ? $_SESSION['S_ID'] : null;
-    // $usuario_rol = isset($_SESSION['S_ROL']) ? $_SESSION['S_ROL'] : null;
-
 
     // Consulta para obtener el nombre del usuario
     $query = "SELECT nombres FROM usuario WHERE id = :usuario_id";

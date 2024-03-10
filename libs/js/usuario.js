@@ -6,8 +6,6 @@ function Login() {
         return Swal.fire('Mensaje de Advertencia', 'Ingrese los datos de sesión', 'warning');
     }
     $.ajax({
-        //url: '../controllers/usuario/login.php',
-        //./controllers/usuario/login.php
         //url:'http://localhost:8080/inventario_belen/controllers/usuario/login.php',
         url:'http://localhost/inventario_belen/controllers/usuario/login.php',
         type: 'POST',
@@ -16,6 +14,7 @@ function Login() {
             p: pass
         }
     }).done(function (resp) {
+        console.log(resp);
         try {
             let data = JSON.parse(resp);
 
@@ -33,8 +32,6 @@ function Login() {
 
         } catch (error) {
             // Error al parsear la respuesta JSON
-            //console.error('Error al parsear la respuesta JSON:', error);
-            //console.log('Respuesta del servidor:', resp);
             Swal.fire('Error', 'Ha ocurrido un error en el servidor', 'error');
         }
     }).fail(function (jqXHR, textStatus, errorThrown) {

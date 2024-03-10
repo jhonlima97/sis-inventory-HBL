@@ -1,4 +1,5 @@
 <?php
+
 require_once 'conexionbd.php';
 
 class Model_Usuario extends conexionBD

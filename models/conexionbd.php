@@ -1,22 +1,16 @@
 <?php
 class conexionBD {
-    private $host;
-    private $dbName;
-    private $user;
-    private $password;
+    private $host = 'localhost';
+    private $dbName = 'inventario_belen';
+    private $usuario = 'root';
+    private $password = 'ADMINPHP';
+    
     private $pdo;
-
-    function __construct() {
-        $this->host = getenv('DB_HOST');
-        $this->dbName = getenv('DB_NAME');
-        $this->user = getenv('DB_USER');
-        $this->password = getenv('DB_PASS');
-    }
-
+      
     function conexion() {
         try {
             $this->pdo = new PDO(
-                "mysql:host=$this->host;dbname=$this->dbName", $this->user, $this->password
+                "mysql:host=$this->host;dbname=$this->dbName", $this->usuario, $this->password
             );
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->exec("SET NAMES 'UTF8'");

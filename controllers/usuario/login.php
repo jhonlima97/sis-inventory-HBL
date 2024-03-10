@@ -1,4 +1,5 @@
 <?php
+
 require '../../models/model_usuario.php';
 
 $MU = new Model_Usuario();
@@ -23,6 +24,5 @@ if ($consulta !== null) {
     $respuesta = array("error" => true, "mensaje" => "Usuario no encontrado o contraseña incorrecta");
     echo json_encode($respuesta);
 }
-
 
 ?>
