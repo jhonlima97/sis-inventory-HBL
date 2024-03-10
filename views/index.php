@@ -1,5 +1,11 @@
 
 <?php
+
+require 'vendor/autoload.php'; // Requerir Composer's autoloader
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 session_start();
 if (!isset($_SESSION['S_ID'])) {
   header('Location: ../index.php');

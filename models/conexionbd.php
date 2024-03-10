@@ -1,12 +1,17 @@
 <?php
-
 class conexionBD {
-   
-    private $host     = 'localhost';
-    private $dbName   = 'inventario_belen';
-    private $user     = 'root';
-    private $password = 'ADMINPHP'; // Aquí va tu contraseña de MySQL
+    private $host;
+    private $dbName;
+    private $user;
+    private $password;
     private $pdo;
+
+    function __construct() {
+        $this->host = getenv('DB_HOST');
+        $this->dbName = getenv('DB_NAME');
+        $this->user = getenv('DB_USER');
+        $this->password = getenv('DB_PASS');
+    }
 
     function conexion() {
         try {
@@ -30,6 +35,3 @@ class conexionBD {
 }
 
 ?>
-
-
-

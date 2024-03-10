@@ -6,7 +6,6 @@ if (isset($_SESSION['S_ID'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
