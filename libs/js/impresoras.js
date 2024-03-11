@@ -88,10 +88,18 @@ function listar_impresoras() {
                 },
                 {
                     "data": null,
+                    // Si deseas cambiar el tamaño de los iconos, puedes utilizar las siguientes clases:
+                    // btn-xs (pequeño)
+                    // btn-sm (mediano)
+                    // btn-lg (grande)
+                    // btn-xl (extra grande)
+                    
                     render: function (data, type, row) {
-                        return '  ' + '<button class="editar btn btn-primary btn-xs"><i class="fas fa-edit"></i></button>' +'   '+
-                        '<button class="eliminar btn btn-danger btn-xs" onclick="Eliminar_Impresora(\'' + row.cod_patrimonial + '\')"><i class="fas fa-trash"></i></button>';
+                        return '<button class="editar btn btn-primary btn-sm" title="Editar"><i class="fas fa-edit"></i></button>' +
+                               '<button class="eliminar btn btn-danger btn-sm" title="Eliminar" ' +
+                               'onclick="Eliminar_Impresora(\'' + row.cod_patrimonial + '\')"><i class="fas fa-trash"></i></button>';
                     }
+                    
                 }
             ],
             "columnDefs": [

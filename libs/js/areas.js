@@ -46,9 +46,12 @@ function listar_areas() {
                 // btn-xl (extra grande)
 
                 render: function (data, type, row) {
-                    return "<button class='editar btn btn-primary btn-sm'><i class='fas fa-edit'></i></button>" +'   '+
-                           "<button class='eliminar btn btn-danger btn-sm' onclick='Eliminar_Area(" + row.id + ")'><i class='fas fa-trash'></i></button>";
+                    
+                    return "<button class='editar btn btn-primary btn-sm' title='Editar'><i class='fas fa-edit'></i></button>" +
+                            "<button class='eliminar btn btn-danger btn-sm' title='Eliminar' " +
+                            "onclick='Eliminar_Area(" + row.id + ")'> <i class='fas fa-trash'></i></button>";
                 }
+                
             }
         ],
         "language": idioma_espanol,

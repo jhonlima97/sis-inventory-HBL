@@ -109,8 +109,9 @@ function listar_servidores() {
                     // btn-xl (extra grande)
 
                     render: function (data, type, row) {
-                        return "<button class='editar btn btn-primary btn-xs'><i class='fas fa-edit'></i></button>" + '   '+
-                        '<button class="eliminar btn btn-danger btn-xs" onclick="Eliminar_Servidor(\'' + row.cod_patrimonial + '\')"><i class="fas fa-trash"></i></button>';
+                        return '<button class="editar btn btn-primary btn-sm" title="Editar"><i class="fas fa-edit"></i></button>' +
+                               '<button class="eliminar btn btn-danger btn-sm" title="Eliminar" ' +
+                               'onclick="Eliminar_Servidor(\'' + row.cod_patrimonial + '\')"><i class="fas fa-trash"></i></button>';
                     }
                 }
             ],
