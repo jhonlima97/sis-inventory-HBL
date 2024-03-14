@@ -48,24 +48,24 @@
     </div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand" style="background-color:#d5eeff;">
+  <nav class="navbar navbar-expand" style="background-color:#506f86;">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item"> <!-- Icono de ocultar y mostrar menu  -->
         <a class="nav-link" data-widget="pushmenu" role="button">
-          <i class="fas fa-bars fa-2x"></i></a>
+          <i class="fas fa-bars fa-1x" style="color:white"></i></a>
       </li>
-      <li class="nav-item">
-        <a href="../views/index.php" class="nav-link"><b>Página Principal</b></a>
+      <li class="nav-item" style="margin-left: 10px; margin-right: 10px;">
+        <a href="../views/index.php" class="nav-link" style="color:white; font-size:15px"><b>Página Principal</b></a>
       </li>
-      <li class="nav-item">
-        <a href="../views/index.php?view=patrimonio" class="nav-link"><b>Patrimonio</b></a>
+      <li class="nav-item" style="margin-left: 10px; margin-right: 10px;">
+        <a href="../views/index.php?view=patrimonio" class="nav-link" style="color:white; font-size:15px"><b>Patrimonio</b></a>
       </li>
-      <li class="nav-item">
-        <a href="../views/index.php?view=desplazamientos" class="nav-link"><b>Desplazamientos</b></a>
+      <li class="nav-item" style="margin-left: 10px; margin-right: 10px;">
+        <a href="../views/index.php?view=desplazamientos" class="nav-link" style="color:white; font-size:15px"><b>Desplazamientos</b></a>
       </li>
-      <li class="nav-item">
-        <a href="../views/index.php?view=graficos" class="nav-link"><b>Gráficos</b></a>
+      <li class="nav-item" style="margin-left: 10px; margin-right: 10px;">
+        <a href="../views/index.php?view=graficos" class="nav-link" style="color:white; font-size:15px"><b>Gráficos</b></a>
       </li>
     </ul>
 
@@ -74,7 +74,7 @@
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
+          <i class="fas fa-search" style="color:white"></i>
         </a>
         <div class="navbar-search-block">
           <form class="form-inline">
@@ -85,7 +85,7 @@
                   <i class="fas fa-search"></i>
                 </button>
                 <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
+                  <i class="fas fa-times" ></i>
                 </button>
               </div>
             </div>
