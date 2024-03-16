@@ -19,8 +19,7 @@ if (isset($_SESSION['S_ID'])) {
   <link rel="stylesheet" href="libs/css/login.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  
   <!-- Theme style -->
   <link rel="stylesheet" href="libs/css/adminlte.min.css">
   
