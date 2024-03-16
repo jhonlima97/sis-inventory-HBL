@@ -121,6 +121,7 @@ function listar_usuarios() {
         "async": false,
         "processing": true,
         "ajax": {
+            // Modificar la rutas en production
             "url": "../controllers/usuario/listar_usuarios.php",
             type: 'POST'
         },
