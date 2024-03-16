@@ -133,6 +133,7 @@ function CreateGrafico(equipo, cantidad, colors,type,indexAxis, header, chartId)
     });
 }
 
+// Gerenate color random JS
 function generateNumber(number) {
     return (Math.random()*number).toFixed(0);
 }

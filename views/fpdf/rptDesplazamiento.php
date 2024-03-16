@@ -3,9 +3,9 @@ setlocale(LC_TIME, 'es_ES.UTF-8');
 require('./fpdf.php');
 //require_once 'conexionbd.php';
 $servername = "localhost";
-$username = "root";
-$password = "ADMINPHP";
-$dbname = "inventario_belen";
+$username   = "root";
+$password   = "ADMINPHP";
+$dbname     = "inventario_belen";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->query("SET NAMES 'utf8'");

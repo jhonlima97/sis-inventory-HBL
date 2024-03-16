@@ -85,11 +85,11 @@ if (!isset($_SESSION['S_ID'])) {
 
     // Aquí va el contenido por defecto si no se especifica una vista
   ?>
+  
   <!-- Contenido del Dashboard -->
   <body>
       <div class="col-md-4">
-          <h2 class="etiqueta-inventario">
-              Bienvenido a <br>
+          <h2 class="etiqueta-inventario">Bienvenido a <br>
               <span class="contenedor-celeste">Belen Informatics</span>
           </h2>         
       </div> 

@@ -56,9 +56,9 @@ class PDF extends FPDF
 
 
 $servername = "localhost";
-$username = "root";
-$password = "ADMINPHP";
-$dbname = "inventario_belen";
+$username   = "root";
+$password   = "ADMINPHP";
+$dbname     = "inventario_belen";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->query("SET NAMES 'utf8'");

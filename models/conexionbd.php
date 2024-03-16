@@ -1,9 +1,9 @@
 <?php
 class conexionBD {
     private $host = 'localhost';
-    private $dbName = 'bd-hbl-production';
+    private $dbName = 'inventario_belen';
     private $usuario = 'root';
-    private $password = '';
+    private $password = 'ADMINPHP';
     
     private $pdo;
       
