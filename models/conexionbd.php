@@ -1,5 +1,6 @@
 <?php
 class conexionBD {
+    // Acceso personal para el sistema en prduccion
     private $host = 'localhost';
     private $dbName = 'id21977262_inventario';
     private $usuario = 'id21977262_root';
