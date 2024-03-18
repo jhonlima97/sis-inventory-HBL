@@ -143,6 +143,11 @@ function CargarSelectAreas_Edit() {
     $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
 }
 
+// Para el modal de registro
+$("#modal_registro_servidor .select2-dropdown").select2({
+    dropdownParent: $('#modal_registro_servidor')
+});
+
 function AbrirModalRegistroServidor() {
     //LimpiarModalComputadoras();
     $("#modal_registro_servidor").modal({ backdrop: 'static', keyboard: false }) 
@@ -207,14 +212,17 @@ function Registrar_Servidor() {
     })
 }
 
+// Para el modal de edición
+$("#modal_editar_servidor .select2-dropdown").select2({
+    dropdownParent: $('#modal_editar_servidor')
+});
+
 $('#tbl_servidores').on('click', '.editar', function () {
     var data = tbl_servidores.row($(this).parents('tr')).data();
 
     if (tbl_servidores.row(this).child.isShown()) {
-        var data = tbl_servidores.row(this).data;
-       
+        var data = tbl_servidores.row(this).data;  
     }
-    //alert(data);
     //Abrir Modal para editar servidores 
     $("#modal_editar_servidor").modal({ backdrop: 'static', keyboard: false }) //No cerrar cuando se dé click al costado
     $('.form-control').removeClass("is-invalid").removeClass("is-valid")
@@ -222,16 +230,17 @@ $('#tbl_servidores').on('click', '.editar', function () {
 
     document.getElementById('txt_cod_editar').value  = data.cod_patrimonial;
     document.getElementById('txt_nombre_editar').value  = data.nombre;
-    $("#select_marca_editar").select2().val(data.marca).trigger('change.select2');  //select marca bien
     document.getElementById('txt_modelo_editar').value = data.modelo;
     document.getElementById('txt_serie_editar').value = data.serie;
     document.getElementById('txt_so_editar').value = data.sis_ope;
     document.getElementById('txt_ip_editar').value = data.ip;
     document.getElementById('txt_procesador_editar').value = data.procesador;
-    $("#select_ram_editar").select2().val(data.ram).trigger('change.select2');  //select ram  bien
     document.getElementById('txt_disco_editar').value = data.disco;
-    $("#select_area_editar").select2().val(data.area_id).trigger('change.select2');   //select area
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');  //select estado
+
+    $("#select_marca_editar").val(data.marca).trigger('change');  //select marca bien
+    $("#select_ram_editar").val(data.ram).trigger('change');  //select ram  bien
+    $("#select_area_editar").val(data.area_id).trigger('change');   //select area
+    $("#select_estado_editar").val(data.estado).trigger('change');  //select estado
 
 })
 

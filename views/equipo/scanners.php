@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE SCANNERS </b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <h3><b>MANTENIMIENTO DE SCANNERS </b></h3>
         </div>
         <div class="col-sm-6">
 
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <table id="tbl_scanners" class="table table-striped table-bordered">
+    <table id="tbl_scanners" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -51,7 +51,7 @@
                             class="form-control" onpaste="return false">
                             </label>
                             <label for="">Seleccione Marca
-                                <select class="form-control" name="select_marca" id="select_marca" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="EPSON">EPSON</option>
                                 <option value="CANON">CANON</option>
                                 <option value="HP">HP</option>
@@ -87,7 +87,7 @@
                                 class="form-control" onpaste="return false">
                             </label>
                             <label for="">Área
-                                <select class="form-control" name="select_area" id="select_area" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                 </select>
                                 </label><br>
@@ -107,7 +107,8 @@
         </div>
     </div>
     <!-- Fin Modal -->
-
+    
+    <!-- Inicio Modal EDITAR -->
     <div class="modal fade" id="modal_editar_scanner" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -124,7 +125,7 @@
                                                         
                             <label for="">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
-                                <select class="form-control" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="CANON">CANON</option>
                                 <option value="EPSON">EPSON</option>
                                 <option value="XEROX">XEROX</opton>
@@ -154,7 +155,7 @@
                         <!-- Columna 3 -->
                         <div class="col-md-4">
                             <label for="">Seleccione Área
-                            <select class="form-control" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>

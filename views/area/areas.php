@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE ÁREAS</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <h3><b>MANTENIMIENTO DE ÁREAS</b></h3>
         </div>
         <div class="col-sm-6">
             <button class="btn btn-primary btn-sm float-right" onclick="AbrirModalRegistroArea()"><i class="fas fa-plus"></i>

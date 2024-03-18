@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer" style="margin-left: auto;">
     <strong>Copyright &copy; 2023-2024 <b>Hospital "Belén" - Lambayeque</b>.</strong> <br>
      Desarrollado por María Gabriela Santillán Cabrejos
     <div class="float-right d-none d-sm-inline-block">
@@ -6,14 +6,13 @@
     </div>
   </footer>
 </div>
-<!-- ./wrapper -->
+
 
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap 4 -->
 <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 
 <!-- AdminLTE App -->
 <script src="../libs/js/adminlte.js"></script>
@@ -29,7 +28,6 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
-
 <!-- LLamo a mis js de mis tablas -->
 <script src="../libs/js/usuario.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/areas.js?rev=<?php echo time(); ?>"></script>
@@ -40,16 +38,11 @@
 <script src="../libs/js/switches.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/perifericos.js?rev=<?php echo time(); ?>"></script>
 <script src="../libs/js/reportes.js?rev=<?php echo time(); ?>"></script>
-
+  
 <script>
-  // Carga el select2 de la tabla Usuario
-  $(document).ready(function() {
-    $('.js-example-basic-single').select2();
-
-  });
-
   // Inicializa las tablas con DataTable
   $(document).ready(function() {
+
     listar_areas();
     listar_usuarios();
     listar_computadoras();

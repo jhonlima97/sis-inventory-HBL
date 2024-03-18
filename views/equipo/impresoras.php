@@ -1,10 +1,9 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE IMPRESORAS</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <h3><b>MANTENIMIENTO DE IMPRESORAS</b></h3>
         </div>
         <div class="col-sm-6">
-            
             <button class="btn btn-primary btn-sm float-right" onclick="AbrirModalRegistroImpresora()"><i class="fas fa-plus"></i>
                 Nuevo Registro
             </button>
@@ -12,7 +11,7 @@
     </div>
 
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_impresoras" class="table table-striped table-bordered">
+    <table id="tbl_impresoras" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -50,7 +49,7 @@
                             class="form-control" onpaste="return false">
                             
                             <label for="">Seleccione Marca</label>
-                                <select class="form-control" name="select_marca" id="select_marca" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="Canon">Canon</option>
                                 <option value="Brother">Brother</option>
                                 <option value="Epson">Epson</option>
@@ -77,7 +76,7 @@
                             
 
                             <label for="">Área</label>
-                            <select class="form-control" name="select_area" id="select_area" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             
@@ -98,8 +97,8 @@
     </div>
     <!-- Fin Modal -->
 
-     <!-- Inicio Modal MODIFICAR-->
-     <div class="modal fade" id="modal_editar_impresora" aria-hidden="true">
+    <!-- Inicio Modal MODIFICAR-->
+    <div class="modal fade" id="modal_editar_impresora" aria-hidden="true">
         <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -115,7 +114,7 @@
                                                         
                             <label for="">Seleccione Marca</label>
                                 <input type="text" id="txt_cod_editar" hidden>
-                                <select class="form-control" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="Canon">Canon</option>
                                 <option value="Brother">Brother</option>
                                 <option value="Epson">Epson</option>
@@ -138,18 +137,16 @@
                             
 
                             <label for="">Seleccione Área</label>
-                            <select class="form-control" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
 
 
                             <label for="">Estado</label>
-                                <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
-                                    <option value="BUENO">BUENO</option>
-                                    <option value="MALO">MALO</option>
-                                </select>
-
-
+                            <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
+                                <option value="BUENO">BUENO</option>
+                                <option value="MALO">MALO</option>
+                            </select>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,12 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>REPORTES DE EQUIPOS DADOS DE BAJA</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-12">
+            <h3 ><b>REPORTES DE EQUIPOS DADOS DE BAJA</b></h3>
         </div>
         
     </div>
 
-    <div class="row mb-4" style="margin: 10px;">
+    <div class="row mb-4" style="margin-top: 10px;">
         <div class="col-md-8"> <!-- Utiliza la clase "col-md-6" para que ambos elementos ocupen la mitad del ancho en dispositivos medianos y grandes -->
             <label for="form-control">Seleccione Un Tipo de bien para ver su Reporte</label>
             <div class="d-flex"> <!-- Utiliza la clase "d-flex" para establecer un contenedor flexible y ajustar los elementos dentro -->
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_reporte" class="table table-striped table-bordered">
+    <table id="tbl_reporte" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>N.°</th>

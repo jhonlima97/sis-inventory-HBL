@@ -9,6 +9,7 @@ if (isset($_SESSION['S_ID'])) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +25,7 @@ if (isset($_SESSION['S_ID'])) {
   <link rel="stylesheet" href="libs/css/adminlte.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css">
+
 </head>
 
 
@@ -106,7 +108,6 @@ if (isset($_SESSION['S_ID'])) {
     </div>
 </div>
 
-
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -116,6 +117,7 @@ if (isset($_SESSION['S_ID'])) {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js"></script>
 <script src="libs/js/login.js"></script>
 <script src="libs/js/usuario.js?rev=<?php echo time();?>"></script>   <!-- para Volver a recargar el js  -->
+
 
 <script>
 

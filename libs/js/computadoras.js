@@ -135,6 +135,11 @@ function CargarSelectAreas_Edit() {
     $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
 }
 
+// Para el modal de registro
+$("#modal_registro_computadora .select2-dropdown").select2({
+    dropdownParent: $('#modal_registro_computadora')
+});
+
 function AbrirModalRegistroComputadora() {
     //LimpiarModalComputadoras();
     $("#modal_registro_computadora").modal({ backdrop: 'static', keyboard: false }) 
@@ -197,13 +202,17 @@ function Registrar_Computadora() {
     })
 }
 
+// Para el modal de edición
+$("#modal_editar_computadora .select2-dropdown").select2({
+    dropdownParent: $('#modal_editar_computadora')
+});
+
 // Abrir el modal de Modificar y cargar los datos de acuerdo a cada computadora
 $('#tbl_computadoras').on('click', '.editar', function () {
     var data = tbl_computadoras.row($(this).parents('tr')).data();
 
     if (tbl_computadoras.row(this).child.isShown()) {
         var data = tbl_computadoras.row(this).data;
-       
     }
     //alert(data);
     //Abrir Modal para editar computadoras 
@@ -211,19 +220,19 @@ $('#tbl_computadoras').on('click', '.editar', function () {
     $('.form-control').removeClass("is-invalid").removeClass("is-valid")
     $("#modal_editar_computadora").modal('show');
 
-    document.getElementById('txt_cod_editar').value  = data.cod_patrimonial; //Nombre de tabla segun listar
-    $("#select_marca_editar").select2().val(data.marca).trigger('change.select2');  //select marca bien
+    document.getElementById('txt_cod_editar').value  = data.cod_patrimonial;
     document.getElementById('txt_modelo_editar').value = data.modelo;
     document.getElementById('txt_serie_editar').value = data.serie;
     document.getElementById('txt_so_editar').value = data.sis_ope;
     document.getElementById('txt_ip_editar').value = data.ip;
     document.getElementById('txt_procesador_editar').value = data.procesador;
-    $("#select_ram_editar").select2().val(data.ram).trigger('change.select2');  //select ram  bien
     document.getElementById('txt_disco_editar').value = data.disco;
+    // Cargar los valores seleccionados
+    $("#select_ram_editar").val(data.ram).trigger('change');        //select ram
+    $("#select_marca_editar").val(data.marca).trigger('change');    //select marca
+    $("#select_area_editar").val(data.area_id).trigger('change');   //select area
 
-    $("#select_area_editar").select2().val(data.area_id).trigger('change.select2');   //select area
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');  //select estado
-
+    document.getElementById('select_estado_editar').value = data.estado;
 })
 
 // Funcion Modificar computadoras en la BD

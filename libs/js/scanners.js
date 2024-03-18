@@ -113,6 +113,11 @@ function CargarSelectAreas_Edit() {
     $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
 }
 
+// Para el modal de registro
+$("#modal_registro_scanner .select2-dropdown").select2({
+    dropdownParent: $('#modal_registro_scanner')
+});
+
 function AbrirModalRegistroScanner() {
     //LimpiarModalComputadoras();
     $("#modal_registro_scanner").modal({ backdrop: 'static', keyboard: false }) 
@@ -171,6 +176,11 @@ function Registrar_Scanner() {
     })
 }
 
+// Para el modal de edición
+$("#modal_editar_scanner .select2-dropdown").select2({
+    dropdownParent: $('#modal_editar_scanner')
+});
+
 $('#tbl_scanners').on('click', '.editar', function () {
     var data = tbl_scanners.row($(this).parents('tr')).data();
 
@@ -185,14 +195,15 @@ $('#tbl_scanners').on('click', '.editar', function () {
     $("#modal_editar_scanner").modal('show');
 
     document.getElementById('txt_cod_editar').value  = data.cod_patrimonial; //Nombre de tabla segun listar
-    $("#select_marca_editar").select2().val(data.marca).trigger('change.select2');  //select marca bien
     document.getElementById('txt_modelo_editar').value = data.modelo;
     document.getElementById('txt_serie_editar').value = data.serie;
     document.getElementById('txt_so_editar').value = data.sistema_operativo;
     document.getElementById('txt_velocidad_editar').value = data.velocidad;
     document.getElementById('txt_resol_editar').value = data.resolucion;
-    $("#select_area_editar").select2().val(data.area_id).trigger('change.select2');   //select area
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');  //select estado
+    $("#select_marca_editar").val(data.marca).trigger('change');  //select marca bien
+    $("#select_area_editar").val(data.area_id).trigger('change');   //select area
+    document.getElementById('select_estado_editar').value = data.estado;
+    // $("#select_estado_editar").val(data.estado).trigger('change');  //select estado
 
 })
 

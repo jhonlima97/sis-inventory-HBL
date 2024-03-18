@@ -81,7 +81,7 @@ if (!isset($_SESSION['S_ID'])) {
     }
   } else {
   $pageTitle = 'SIS INVENTARIO';
-  include_once "../includes/header.php"; 
+  include_once "../includes/header.php";
 
     // Aquí va el contenido por defecto si no se especifica una vista
   ?>

@@ -1,17 +1,19 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-12" style="text-align: left;">
-            <h3 class="m-3"><b>DESPLAZAMIENTOS DE EQUIPOS INFORMÁTICOS</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-8">
+            <h3><b>DESPLAZAMIENTOS DE EQUIPOS INFORMÁTICOS</b></h3>
         </div>
-        <div class="col-sm-11">
-            <button class="btn btn-success btn-sm float-right" style="position:relative; top:5px; left:110px;" onclick="window.location.href='../views/index.php?view=registro_desplazamiento'"><i class="fas fa-plus"></i>
+        <div class="col-sm-4">
+        <button class="btn btn-success btn-sm float-right" 
+            onclick="window.location.href='../views/index.php?view=registro_desplazamiento'"><i class="fas fa-plus"></i>
                 Nuevo registro
             </button>
         </div>
     </div>
 
+
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_desplazamientos" class="table table-striped table-bordered">
+    <table id="tbl_desplazamientos" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>N°</th>

@@ -19,6 +19,10 @@ $(document).ready(function () {
   });
 });
 
+// Para el modal de registro
+$("#modal_registro_impresora #select_area_prov").select2({
+  dropdownParent: $('#modal_registro_impresora')
+});
 
 //nuevo codigo de desplazamiento
 function obtenerUltimoCodigo() {
@@ -247,57 +251,6 @@ function Buscar_Bien() {
   });
 }
 
-/*function AgregarEquipo() {
-  var tipoBien = $("#select_bien").val();
-  var codPatrimonial = $("#txt_cod_patrimonial").val();
-  var marca = $("#txt_marca").val();
-  var modelo = $("#txt_modelo").val();
-  var serie = $("#txt_serie").val();
-
-  // Verificar que al menos uno de los campos de marca, modelo o serie tenga un valor
-  if (marca === "" && modelo === "" && serie === "") {
-    Swal.fire("Error", "Debe buscar un bien antes de agregarlo", "error");
-    return;
-  }
-
-  // Verificar si el código patrimonial ya existe en la tabla
-  var existeCodPatrimonial = false;
-  $("#equipos-table tbody tr").each(function () {
-    var codPatrimonialTabla = $(this).find("td:eq(1)").text();
-    if (codPatrimonial === codPatrimonialTabla) {
-      existeCodPatrimonial = true;
-      return false; // Salir del bucle each si se encuentra un duplicado
-    }
-  });
-
-  if (existeCodPatrimonial) {
-    Swal.fire("Error", "Este equipo ya fue agregado", "error");
-    //$('#txt_cod_patrimonial').val("");
-    //$('#select_bien').val(""); // Establece el valor del select como una cadena vacía
-    $("#txt_marca").val("");
-    $("#txt_modelo").val("");
-    $("#txt_serie").val("");
-    return;
-  }
-
-  var html = `<tr>
-                <td>${tipoBien}</td>
-                <td>${codPatrimonial}</td>
-                <td>${marca}</td>
-                <td>${modelo}</td>
-                <td>${serie}</td>
-                <td><button type="button" class="btn btn-danger btn-sm" onclick="EliminarEquipo(this)"><i class="fas fa-trash"></i></button></td>
-            </tr>`;
-
-  $("#equipos-table tbody").append(html);
-
-  // Limpiar el valor del input de modelo
-  $("#txt_marca").val("");
-  $("#txt_modelo").val("");
-  $("#txt_serie").val("");
-  $("#txt_cod_patrimonial").val("");
-}*/
-
 function AgregarEquipo() {
   var tipoBienId = $("#select_bien").val(); // Obtén el ID del tipo de bien seleccionado
   var tipoBienNombre = $("#select_bien option:selected").text(); // Obtén el nombre del tipo de bien seleccionado
@@ -349,8 +302,6 @@ function AgregarEquipo() {
   $("#txt_serie").val("");
   $("#txt_cod_patrimonial").val("");
 }
-
-
 
 function EliminarEquipo(button) {
   $(button).closest("tr").remove();

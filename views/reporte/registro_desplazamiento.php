@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row mb-4">
-        <div class="col-sm-12" style="text-align: left;">
-            <h3 class="m-3"><b>GESTIÓN DE ASIGNACIONES</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-12">
+            <h3><b>GESTIÓN DE ASIGNACIONES</b></h3>
         </div>
     </div>
     <!-- Aquí empieza el formulario -->
@@ -39,7 +39,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text">Área proveniente</label>
                         </div>
-                        <select class="form-control" name="select_area_prov" id="select_area_prov">
+                        <select class="form-control" name="select_area_prov" id="select_area_prov" style="width: 50%;">
                             <!-- Opciones de área en js -->
                         </select>
                     </div>
@@ -55,7 +55,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text">Área asignada</label>
                         </div>
-                        <select class="form-control" name="select_area_asig" id="select_area_asig">
+                        <select class="form-control" name="select_area_asig" id="select_area_asig" style="width: 50%;">
                             <!-- Opciones de área en js -->
 
                         </select>
@@ -80,13 +80,6 @@
                             <label class="input-group-text">Tipo de bien</label>
                         </div>
                         <select class="form-control" name="select_bien" id="select_bien"> <!-- Ajusta el ancho según sea necesario -->
-                            <!--<option value="" selected>Seleccione...</option> 
-                            <option value="COMPUTADORAS">COMPUTADORAS</option>
-                            <option value="IMPRESORAS">IMPRESORAS</option>
-                            <option value="SERVIDORES">SERVIDORES</option>
-                            <option value="SCANNERS">SCANNERS</option>
-                            <option value="SWITCHES">SWITCHES</option>
-                            <option value="PERIFERICOS">PERIFERICOS</option>-->
                         </select>
                     </div>
 
@@ -163,5 +156,14 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
 <script src="../libs/js/registro_desplazamiento.js"></script>
+
+<script>
+    
+// Carga el select2 de la tabla
+  $(document).ready(function() {
+    $('#select_area_prov').select2();
+    $('#select_area_asig').select2();
+
+  });
+</script>

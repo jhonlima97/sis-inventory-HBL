@@ -130,6 +130,11 @@ function CargarSelectAreas_Edit() {
     $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
 }
 
+// Para el modal de registro
+$("#modal_registro_impresora .select2-dropdown").select2({
+    dropdownParent: $('#modal_registro_impresora')
+});
+
 function AbrirModalRegistroImpresora() {
     //LimpiarModalComputadoras();
     $("#modal_registro_impresora").modal({ backdrop: 'static', keyboard: false }) 
@@ -142,9 +147,10 @@ function Registrar_Impresora() {
     let marca   = document.getElementById('select_marca').value;
     let modelo  = document.getElementById('txt_modelo').value;
     let serie   = document.getElementById('txt_serie').value;
-    let num_toner      = document.getElementById('txt_toner').value;
+    let num_toner = document.getElementById('txt_toner').value;
     let estado  = document.getElementById('select_estado').value;
     let area    = document.getElementById('select_area').value;
+    // $("#select_area").select2().val(data.area).trigger('change.select2');
 
 $.ajax({
     url: '../controllers/equipos/registrar_impresora.php',
@@ -183,27 +189,32 @@ $.ajax({
 })
 }
 
+// Para el modal de edición
+$("#modal_editar_impresora .select2-dropdown").select2({
+    dropdownParent: $('#modal_editar_impresora')
+});
+
 $('#tbl_impresoras').on('click', '.editar', function () {
     var data = tbl_impresoras.row($(this).parents('tr')).data();
-
     if (tbl_impresoras.row(this).child.isShown()) {
         var data = tbl_impresoras.row(this).data;
-       
     }
-    
-    $("#modal_editar_impresora").modal({ backdrop: 'static', keyboard: false }) //No cerrar cuando se dé click al costado
-    $('.form-control').removeClass("is-invalid").removeClass("is-valid")
+    $("#modal_editar_impresora").modal({ backdrop: 'static', keyboard: false }) //No cerrar al dar click al costado
     $("#modal_editar_impresora").modal('show');
+    $('.form-control').removeClass("is-invalid").removeClass("is-valid")
 
-    document.getElementById('txt_cod_editar').value  = data.cod_patrimonial; //Nombre de tabla segun listar
-    $("#select_marca_editar").select2().val(data.marca).trigger('change.select2');  //select marca bien
+    document.getElementById('txt_cod_editar').value = data.cod_patrimonial;
     document.getElementById('txt_modelo_editar').value = data.modelo;
     document.getElementById('txt_serie_editar').value = data.serie;
     document.getElementById('txt_toner_editar').value = data.num_toner;
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');  //select estado
-    $("#select_area_editar").select2().val(data.area_id).trigger('change.select2');   //select area
+    // Cargar los valores seleccionados
+    $("#select_marca_editar").val(data.marca).trigger('change');
+    $("#select_area_editar").val(data.area_id).trigger('change');
 
-})
+    document.getElementById('select_estado_editar').value   = data.estado;
+
+});
+
 
 function Modificar_Impresora() {
     let codigo = document.getElementById('txt_cod_editar').value;

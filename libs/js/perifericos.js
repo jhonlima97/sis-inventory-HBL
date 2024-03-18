@@ -119,6 +119,12 @@ function CargarSelectAreas_Edit() {
     $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
 }
 
+
+// Para el modal de registro
+$("#modal_registro_periferico .select2-dropdown").select2({
+    dropdownParent: $('#modal_registro_periferico')
+});
+
 function AbrirModalRegistroPeriferico() {
     //LimpiarModalPeriferico();
     $("#modal_registro_periferico").modal({ backdrop: 'static', keyboard: false }) 
@@ -172,25 +178,29 @@ $.ajax({
 })
 }
 
+// Para el modal de edición
+$("#modal_editar_periferico .select2-dropdown").select2({
+    dropdownParent: $('#modal_editar_periferico')
+});
+
 $('#tbl_perifericos').on('click', '.editar', function () {
     var data = tbl_perifericos.row($(this).parents('tr')).data();
 
     if (tbl_perifericos.row(this).child.isShown()) {
         var data = tbl_perifericos.row(this).data;
-       
     }
-    
+
     $("#modal_editar_periferico").modal({ backdrop: 'static', keyboard: false }) //No cerrar cuando se dé click al costado
     $('.form-control').removeClass("is-invalid").removeClass("is-valid")
     $("#modal_editar_periferico").modal('show');
 
     document.getElementById('txt_cod_editar').value  = data.cod_patrimonial; //Nombre de tabla segun listar
     document.getElementById('txt_nombre_editar').value = data.nombre;
-    $("#select_marca_editar").select2().val(data.marca).trigger('change.select2');  //select marca bien
     document.getElementById('txt_modelo_editar').value = data.modelo;
     document.getElementById('txt_serie_editar').value = data.serie;
-    $("#select_area_editar").select2().val(data.area_id).trigger('change.select2');   //select area
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');  //select estado
+    $("#select_marca_editar").val(data.marca).trigger('change');  //select marca bien
+    $("#select_area_editar").val(data.area_id).trigger('change');   //select area
+    $("#select_estado_editar").val(data.estado).trigger('change');  //select estado
 
 })
 

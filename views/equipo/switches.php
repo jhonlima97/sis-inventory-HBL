@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE SWITCHES</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <h3><b>MANTENIMIENTO DE SWITCHES</b></h3>
         </div>
         <div class="col-sm-6">
             
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_switches" class="table table-striped table-bordered">
+    <table id="tbl_switches" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -57,7 +57,7 @@
                                 class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
                                 </label>
                                 <label for="">Seleccione Marca
-                                    <select class="form-control" name="select_marca" id="select_marca" style="width:100%;">
+                                    <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                     <option value="D-LINK">D-LINK</option>
                                     <option value="ZyXel">ZyXel</option>
                                     <option value="Mitrastar">Mitrastar</option>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="">Área
-                                    <select class="form-control" name="select_area" id="select_area" style="width:100%;">
+                                    <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                     </select>
 
@@ -132,7 +132,7 @@
                                                         
                             <label for="">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
-                                <select class="form-control" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="D-LINK">D-LINK</option>
                                 <option value="TP ALTRON">TP ALTRON</option>
                                 <option value="ZyXel">ZyXel</option>
@@ -163,7 +163,7 @@
                         <!-- Columna 3 -->
                         <div class="col-md-4">
                             <label for="">Seleccione Área
-                            <select class="jform-control" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>

@@ -1,10 +1,9 @@
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE PERIFÉRICOS</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-6">
+            <h3><b>MANTENIMIENTO DE PERIFÉRICOS</b></h3>
         </div>
         <div class="col-sm-6">
-            
             <button class="btn btn-primary btn-sm float-right" onclick="AbrirModalRegistroPeriferico()"><i class="fas fa-plus"></i>
                 Nuevo Registro
             </button>
@@ -12,7 +11,7 @@
     </div>
 
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_perifericos" class="table table-striped table-bordered">
+    <table id="tbl_perifericos" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
             <tr>
                 <th>ID</th>
@@ -56,7 +55,7 @@
                             </label>
 
                             <label for="">Seleccione Marca
-                                <select class="form-control" name="select_marca" id="select_marca" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="HP">HP</option>
                                 <option value="TOSHIBA">TOSHIBA</option>
                                 <option value="LENOVO">LENOVO</option>
@@ -86,7 +85,7 @@
                         <!-- Columna 3 -->
                         <div class="col-md-4">
                             <label for="">Área
-                            <select class="form-control" name="select_area" id="select_area" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>
@@ -128,7 +127,7 @@
                         
                             <label for="">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
-                                <select class="form-control" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="HP">HP</option>
                                 <option value="TOSHIBA">TOSHIBA</option>
                                 <option value="LENOVO">LENOVO</option>
@@ -151,7 +150,7 @@
                             </label>
 
                             <label for="">Seleccione Área
-                                <select class="form-control" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                                 </select>
                             </label><br>

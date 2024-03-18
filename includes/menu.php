@@ -63,7 +63,7 @@ if ($pdo) {
       <!-- MENUS -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          
+          <!-- MENU DE AREAS -->
           <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fa fa-hospital-o"></i>
@@ -82,6 +82,7 @@ if ($pdo) {
                 
               </ul>
           </li>
+          <!-- MENU DE EQUIPOS -->
           <li class="nav-item">
               <a href="#" class="nav-link">
               <i class="fas fa-keyboard"></i>
@@ -140,24 +141,7 @@ if ($pdo) {
                 </li>              
               </ul>
           </li>
-          <li class="nav-item">
-              <a href="#" class="nav-link">
-              <i class="fa fa-user"></i>
-                <p>
-                  Usuarios
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="../views/index.php?view=usuarios" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Gestion de Usuarios</p>
-                  </a>
-                </li>
-                
-              </ul>
-          </li>
+          <!-- MENU DE REPORTES -->
           <li class="nav-item">
               <a href="#" class="nav-link">
               <i class="fa fa-file"></i>
@@ -191,6 +175,25 @@ if ($pdo) {
                     <p>Gráficos</p>
                   </a>
                 </li>
+              </ul>
+          </li>
+          <!-- MENU USUARIOS -->
+          <li class="nav-item">
+              <a href="#" class="nav-link">
+              <i class="fa fa-user"></i>
+                <p>
+                  Usuarios
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../views/index.php?view=usuarios" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Gestion de Usuarios</p>
+                  </a>
+                </li>
+                
               </ul>
           </li>
         </ul>

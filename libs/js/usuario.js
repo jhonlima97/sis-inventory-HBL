@@ -221,6 +221,7 @@ function Registrar_Usuario() {
     
 }
 
+
 // Abrir el modal de Modificar y cargar los datos de acuerdo a cada usuario
 $('#tbl_usuario').on('click', '.editar', function () {
     var data = tbl_usuarios.row($(this).parents('tr')).data();
@@ -237,10 +238,11 @@ $('#tbl_usuario').on('click', '.editar', function () {
     document.getElementById('txt_nombres_editar').value = data.nombres;
     document.getElementById('txt_email_editar').value = data.email;
     document.getElementById('txt_pass_editar').value = data.pass_hash;
-    $("#select_rol_editar").select2().val(data.rol).trigger('change.select2');
-    $("#select_estado_editar").select2().val(data.estado).trigger('change.select2');
     document.getElementById('txt_pregunta_editar').value = data.pregunta;
     document.getElementById('txt_respuesta_editar').value = data.respuesta;
+    $("#select_rol_editar").val(data.rol).trigger('change');
+    document.getElementById('select_estado_editar').value = data.estado;
+
 })
 
 // Funcion Modificar usuarios en la BD Tiene errores

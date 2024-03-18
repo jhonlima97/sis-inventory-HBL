@@ -1,10 +1,10 @@
 
 <div class="container">
-    <div class="row mb-4" style="margin: 10px;">
-        <div class="col-sm-6" style="text-align: left;">
-            <h3 class="m-0"><b>MANTENIMIENTO DE COMPUTADORAS</b></h3>
+    <div class="row mb-4" style="margin-top: 10px;">
+        <div class="col-sm-8">
+            <h3><b>MANTENIMIENTO DE COMPUTADORAS</b></h3>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <button class="btn btn-primary btn-sm float-right" onclick="AbrirModalRegistroComputadora()"><i class="fas fa-plus"></i>
                 Nuevo Registro
             </button>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Agrega la tabla con DataTable -->
-    <table id="tbl_computadoras" class="table table-striped table-bordered">
+    <table id="tbl_computadoras" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -54,7 +54,7 @@
                             class="form-control">
                             </label>
                             <label for="">Seleccione Marca
-                                <select class="form-control" name="select_marca" id="select_marca" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="HP">HP</option>
                                 <option value="TOSHIBA">TOSHIBA</option>
                                 <option value="LENOVO">LENOVO</option>
@@ -91,7 +91,7 @@
                             class="form-control" onpaste="return false">
                             </label>
                             <label for="">Memoria RAM
-                                <select class="form-control" name="select_ram" id="select_ram" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_ram" id="select_ram" style="width:100%;">
                                 <option value="2GB">2GB</option>
                                 <option value="4GB">4GB</option>
                                 <option value="8GB">8GB</option>
@@ -109,7 +109,7 @@
                             class="form-control" onpaste="return false">
                             </label>
                             <label for="">Área
-                            <select class="form-control" name="select_area" id="select_area" style="width:100%;">
+                            <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>
@@ -147,7 +147,7 @@
                                                         
                             <label for="">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
-                                <select class="form-control" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                     <option value="HP">HP</option>
                                     <option value="TOSHIBA">TOSHIBA</option>
                                     <option value="LENOVO">LENOVO</option>
@@ -178,7 +178,7 @@
                             <input type="text" id="txt_procesador_editar" class="form-control" onpaste="return false">
                             </label>
                             <label for="">Memoria RAM
-                                <select class="form-control" name="select_ram_editar" id="select_ram_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_ram_editar" id="select_ram_editar" style="width:100%;">
                                 <option value="2GB">2GB</option>
                                 <option value="4GB">4GB</option>
                                 <option value="8GB">8GB</option>
@@ -194,7 +194,7 @@
                             <input type="text" id="txt_disco_editar" class="form-control" onpaste="return false">
                             </label>
                             <label for="">Seleccione Área
-                                <select class="form-control" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                                <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                 </select>
                             </label><br>
