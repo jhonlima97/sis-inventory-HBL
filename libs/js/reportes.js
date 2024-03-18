@@ -94,7 +94,7 @@ function getTabla(tabla) {
     if (tabla !== "") {
         tbl_reporte.search('').draw();
         tbl_reporte.clear().draw();
-        tbl_reporte.ajax.url("../controllers/reportes/get_reporte.php?tabla=" + tabla).load();
+        tbl_reporte.ajax.url("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/get_reporte.php?tabla=" + tabla).load();
     } else {
         // Si no se proporciona una tabla, simplemente limpiar los datos
         tbl_reporte.clear().draw();
@@ -111,7 +111,7 @@ function getTabla(tabla) {
 }
 
 function Reporte_bajas(){
-    window.open("../views/fpdf/rptEquiposBajas.php", "_blank");
+    window.open("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/views/fpdf/rptEquiposBajas.php", "_blank");
 }
 
 

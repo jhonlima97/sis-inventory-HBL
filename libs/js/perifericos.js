@@ -37,7 +37,7 @@ function listar_perifericos() {
             "async": false,
             "processing": false,
             "ajax": {
-                "url": "../controllers/equipos/listar_perifericos.php",
+                "url": "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/listar_perifericos.php",
                 type: 'POST'
             },
             "columns": [
@@ -112,11 +112,11 @@ function listar_perifericos() {
 
 // Funcion Listar el nombre de las areas desde la BD
 function CargarSelectAreas() {
-    $("#select_area").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 function CargarSelectAreas_Edit() {
-    $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area_editar").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 
@@ -142,7 +142,7 @@ function Registrar_Periferico() {
     let estado  = document.getElementById('select_estado').value;
 
 $.ajax({
-    url: '../controllers/equipos/registrar_periferico.php',
+    url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/registrar_periferico.php',
         type: 'POST',
         data: {
             cod_patrimonial: codigo,
@@ -219,7 +219,7 @@ function Modificar_Periferico() {
     console.log("Cod_Patrimonial: ", codigo);
     console.log("Nueva Serie: ", serie);
     $.ajax({
-        url: '../controllers/equipos/modificar_periferico.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/modificar_periferico.php',
         type: 'POST',
         data: {
             cod_patrimonial: codigo,
@@ -270,7 +270,7 @@ function Eliminar_Periferico(cod_patrimonial) {
             // Llamada AJAX para eliminar la compu
             console.log(cod_patrimonial)
             $.ajax({
-                url: '../controllers/equipos/eliminar_periferico.php',
+                url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/eliminar_periferico.php',
                 type: 'POST',
                 data: {
                     cod_patrimonial: cod_patrimonial

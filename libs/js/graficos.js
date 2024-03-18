@@ -8,7 +8,7 @@ $(document).ready(function() {
 // Grafico tipo bar Vertical
 function getNumEquiposBar1() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/num_equipos.php',
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
@@ -30,7 +30,7 @@ function getNumEquiposBar1() {
 // Grafico tipo bar Horizontal
 function getNumEquiposBar2() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/num_equipos.php',
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
@@ -53,7 +53,7 @@ function getNumEquiposBar2() {
 // Grafico Pastel tipo pie
 function getNumEquiposPie3() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/num_equipos.php',
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
@@ -77,7 +77,7 @@ function getNumEquiposPie3() {
 // Grafico Pastel tipo doughnut
 function getNumEquiposPie4() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/num_equipos.php',
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
@@ -150,7 +150,7 @@ function MostrarGraficosParams(){
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/controller_param.php',
         type: 'POST',
         data:{
             anio: anio
@@ -188,7 +188,7 @@ function getGraficoParams1() {
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/controller_param.php',
         type: 'POST',
         data:{
             anio: anio
@@ -219,7 +219,7 @@ function getGraficoParams2() {
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/controller_param.php',
         type: 'POST',
         data:{
             anio: anio
@@ -250,7 +250,7 @@ function getGraficoParams3() {
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/controller_param.php',
         type: 'POST',
         data:{
             anio: anio
@@ -281,7 +281,7 @@ function getGraficoParams4() {
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/graficos/controller_param.php',
         type: 'POST',
         data:{
             anio: anio

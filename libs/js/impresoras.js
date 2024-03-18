@@ -36,7 +36,7 @@ function listar_impresoras() {
             "async": false,
             "processing": false,
             "ajax": {
-                "url": "../controllers/equipos/listar_impresoras.php",
+                "url": "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/listar_impresoras.php",
                 type: 'POST'
             },
             "columns": [
@@ -123,11 +123,11 @@ function listar_impresoras() {
 
 // Funcion Listar el nombre de las areas desde la BD
 function CargarSelectAreas() {
-    $("#select_area").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 function CargarSelectAreas_Edit() {
-    $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area_editar").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 // Para el modal de registro
@@ -153,7 +153,7 @@ function Registrar_Impresora() {
     // $("#select_area").select2().val(data.area).trigger('change.select2');
 
 $.ajax({
-    url: '../controllers/equipos/registrar_impresora.php',
+    url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/registrar_impresora.php',
         type: 'POST',
         data: {
             cod_patrimonial: codigo,
@@ -231,7 +231,7 @@ function Modificar_Impresora() {
     console.log("Cod_Patrimonial: ", codigo);
     console.log("Nueva Serie: ", serie);
     $.ajax({
-        url: '../controllers/equipos/modificar_impresora.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/modificar_impresora.php',
         type: 'POST',
         data: {
             cod_patrimonial: codigo,
@@ -282,7 +282,7 @@ function Eliminar_Impresora(cod_patrimonial) {
             // Llamada AJAX para eliminar la compu
             console.log(cod_patrimonial)
             $.ajax({
-                url: '../controllers/equipos/eliminar_impresora.php',
+                url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/eliminar_impresora.php',
                 type: 'POST',
                 data: {
                     cod_patrimonial: cod_patrimonial

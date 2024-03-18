@@ -7,7 +7,7 @@ function Login() {
     }
     $.ajax({
 
-        url:'http://localhost/inventario_belen/controllers/usuario/login.php',
+        url:'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/usuario/login.php',
         type: 'POST',
         data: {
             e: email,
@@ -44,8 +44,7 @@ function Login() {
 
 function redireccionarUsuario(userData) {
     $.ajax({
-        //url: 'http://localhost:8080/inventario_belen/controllers/usuario/crear_sesion.php',
-        url: 'http://localhost/inventario_belen/controllers/usuario/crear_sesion.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/usuario/crear_sesion.php',
         type: 'POST',
         data: {
             id: userData.id,
@@ -122,7 +121,7 @@ function listar_usuarios() {
         "processing": true,
         "ajax": {
             // Modificar la rutas en production
-            "url": "../controllers/usuario/listar_usuarios.php",
+            "url": "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/usuario/listar_usuarios.php",
             type: 'POST'
         },
         "columns": [
@@ -191,7 +190,7 @@ function Registrar_Usuario() {
         return Swal.fire("Mensaje de Advertencia", "Tiene campos vacios", "warning");
     }
     $.ajax({
-        url: '../controllers/usuario/registrar_usuario.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/usuario/registrar_usuario.php',
         type: 'POST',
         data: {
             nombres: nombres,
@@ -268,8 +267,7 @@ function Modificar_Usuario() {
     }
     // Enviar la solicitud AJAX
     $.ajax({
-        url: '../controllers/usuario/modificar_usuario.php',
-        //url:'http://localhost/inventario_belen/controllers/usuario/modificar_usuario.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/usuario/modificar_usuario.php',
         type: 'POST',
         data: {
             id: id,

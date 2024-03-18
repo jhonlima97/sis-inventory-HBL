@@ -1,9 +1,9 @@
 <?php
 class conexionBD {
     private $host = 'localhost';
-    private $dbName = 'inventario_belen';
-    private $usuario = 'root';
-    private $password = 'ADMINPHP';
+    private $dbName = 'id21977262_inventario';
+    private $usuario = 'id21977262_root';
+    private $password = '123456@Gaby';
     
     private $pdo;
       

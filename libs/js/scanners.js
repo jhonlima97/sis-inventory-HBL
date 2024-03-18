@@ -36,7 +36,7 @@ function listar_scanners() {
             "async": false,
             "processing": false,
             "ajax": {
-                "url": "../controllers/equipos/listar_scanners.php",
+                "url": "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/listar_scanners.php",
                 type: 'POST'
             },
             "columns": [
@@ -107,10 +107,10 @@ function listar_scanners() {
 }
 
 function CargarSelectAreas() {
-    $("#select_area").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 function CargarSelectAreas_Edit() {
-    $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area_editar").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 // Para el modal de registro
@@ -137,7 +137,7 @@ function Registrar_Scanner() {
     let estado  = document.getElementById('select_estado').value;
 
     $.ajax({
-        url: '../controllers/equipos/registrar_scanner.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/registrar_scanner.php',
         type: 'POST',
         data: {
             cod_patrimonial: cod,
@@ -203,7 +203,7 @@ $('#tbl_scanners').on('click', '.editar', function () {
     $("#select_marca_editar").val(data.marca).trigger('change');  //select marca bien
     $("#select_area_editar").val(data.area_id).trigger('change');   //select area
     document.getElementById('select_estado_editar').value = data.estado;
-    // $("#select_estado_editar").val(data.estado).trigger('change');  //select estado
+
 
 })
 
@@ -218,13 +218,11 @@ function Modificar_Scanner() {
     let area       = document.getElementById('select_area_editar').value;
     let estado     = document.getElementById('select_estado_editar').value;
 
-    // if (responsable.length === 0 || nombre.length === 0 || id.length === 0) {
-    //     return Swal.fire("Mensaje de Advertencia", "Tiene algunos campos vacíos", "warning");
-    // }
+
     console.log("Cod_Patrimonial: ", cod);
     console.log("Nueva Serie: ", serie);
     $.ajax({
-        url: '../controllers/equipos/modificar_scanner.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/modificar_scanner.php',
         type: 'POST',
         data: {
             cod_patrimonial: cod,
@@ -278,7 +276,7 @@ function Eliminar_Scanner(cod_patrimonial) {
             // Llamada AJAX para eliminar la compu
             console.log(cod_patrimonial)
             $.ajax({
-                url: '../controllers/equipos/eliminar_scanner.php',
+                url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/eliminar_scanner.php',
                 type: 'POST',
                 data: {
                     cod_patrimonial: cod_patrimonial

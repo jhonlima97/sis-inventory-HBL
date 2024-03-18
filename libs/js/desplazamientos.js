@@ -87,7 +87,7 @@ function getTabla2() {
     }
 
     // Actualiza la URL AJAX para cargar los nuevos datos
-    tbl_desplazamientos.ajax.url("../controllers/reportes/listar_desplazamientos.php").load();
+    tbl_desplazamientos.ajax.url("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/listar_desplazamientos.php").load();
 
     // Lógica para numerar las filas
     var PageInfo = tbl_desplazamientos.page.info();
@@ -101,11 +101,11 @@ function getTabla2() {
 
 
 function Imprimir_reporte(id){
-    window.open("../views/fpdf/rptDesplazamiento.php?cod_rpt="+id, "_blank");
+    window.open("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/views/fpdf/rptDesplazamiento.php?cod_rpt="+id, "_blank");
 }
 
 function ver_detalle_desp(id){
-    window.location.href = "../views/index.php?view=detalle_desplazamientos&cod_desp=" + id;
+    window.location.href = "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/views/index.php?view=detalle_desplazamientos&cod_desp=" + id;
 }
 
 
@@ -134,7 +134,7 @@ function Editar_fecha_reporte(){
     let id_desplazamiento = document.getElementById('txt_cod_actualizar').value;
 
     $.ajax({
-        url: '../controllers/reportes/actualizar_fecha.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/actualizar_fecha.php',
         type: 'POST',
         data: {
             id: id_desplazamiento,
@@ -222,7 +222,7 @@ function llenarTabla(respuesta) {
 // Función para realizar la solicitud AJAX y obtener los datos del servidor
 
 function obtenerDatosServidor(cod_Desp) {
-    var url = "../controllers/reportes/listar_detalle.php";
+    var url = "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/listar_detalle.php";
 
     var cod_desp = cod_Desp;
 

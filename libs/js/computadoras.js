@@ -36,7 +36,7 @@ function listar_computadoras() {
             "async": false,
             "processing": false,
             "ajax": {
-                "url": "../controllers/equipos/listar_computadoras.php",
+                "url": "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/listar_computadoras.php",
                 type: 'POST'
             },
             "columns": [
@@ -128,11 +128,11 @@ function listar_computadoras() {
 
 // Funcion Listar el nombre de las areas desde la BD
 function CargarSelectAreas() {
-    $("#select_area").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 function CargarSelectAreas_Edit() {
-    $("#select_area_editar").load("../controllers/equipos/CargarSelectAreas.php");
+    $("#select_area_editar").load("https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreas.php");
 }
 
 // Para el modal de registro
@@ -255,7 +255,7 @@ function Modificar_Computadora() {
     console.log("Cod_Patrimonial: ", codigo);
     console.log("Nueva Serie: ", serie);
     $.ajax({
-        url: '../controllers/equipos/modificar_computadora.php',
+        url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/modificar_computadora.php',
         type: 'POST',
         data: {
             cod_patrimonial: codigo,
@@ -312,7 +312,7 @@ function Eliminar_Computadora(cod_patrimonial) {
             // Llamada AJAX para eliminar la compu
             console.log(cod_patrimonial)
             $.ajax({
-                url: '../controllers/equipos/eliminar_computadora.php',
+                url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/eliminar_computadora.php',
                 type: 'POST',
                 data: {
                     cod_patrimonial: cod_patrimonial

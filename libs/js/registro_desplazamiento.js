@@ -44,19 +44,19 @@ function obtenerUltimoCodigo() {
   };
 
   // Especifica la ruta al controlador PHP
-  xhttp.open("GET", "../controllers/reportes/codigo_desplazamiento.php", true);
+  xhttp.open("GET", "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/codigo_desplazamiento.php", true);
   xhttp.send();
 }
 
 function CargarSelectAreasProv() {
   $("#select_area_prov").load(
-    "../controllers/equipos/CargarSelectAreasProv.php"
+    "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreasProv.php"
   );
 }
 
 function CargarSelectAreasAsig() {
   $("#select_area_asig").load(
-    "../controllers/equipos/CargarSelectAreasAsig.php"
+    "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/equipos/CargarSelectAreasAsig.php"
   );
 }
 
@@ -64,7 +64,7 @@ function CargarSelectTipoBien() {
   //$("#select_bien").load("../controllers/reportes/cargar_tipo_bien.php");
 
   $.ajax({
-    url: '../controllers/reportes/cargar_tipo_bien.php',
+    url: 'https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/cargar_tipo_bien.php',
     type: 'GET',
     success: function(data) {
         // Iterar sobre los datos recibidos y generar las opciones del menú desplegable
@@ -110,7 +110,7 @@ function obtenerResponsableAsignada() {
   // Especifica la ruta al controlador PHP
   xhttp.open(
     "GET",
-    "../controllers/reportes/responsable_area.php?nom_area=" +
+    "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/responsable_area.php?nom_area=" +
       encodeURIComponent(selectedArea),
     true
   );
@@ -148,7 +148,7 @@ function obtenerResponsable() {
   // Especifica la ruta al controlador PHP
   xhttp.open(
     "GET",
-    "../controllers/reportes/responsable_area.php?nom_area=" +
+    "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/responsable_area.php?nom_area=" +
       encodeURIComponent(selectedArea),
     true
   );
@@ -209,7 +209,7 @@ function Buscar_Bien() {
   // Realiza la solicitud AJAX
   $.ajax({
     type: "POST",
-    url: "../controllers/reportes/buscar_bien_patrimonial.php",
+    url: "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/buscar_bien_patrimonial.php",
     data: { tipoBien: tipoBien, codPatrimonial: codPatrimonial },
     success: function (data) {
       var datos = JSON.parse(data);
@@ -365,7 +365,7 @@ function Registrar_Asignacion() {
   }
 
   $.ajax({
-    url: "../controllers/reportes/registrar_desplazamiento.php",
+    url: "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/controllers/reportes/registrar_desplazamiento.php",
     type: "POST",
     data: {
       motivo: motivo,
@@ -385,7 +385,7 @@ function Registrar_Asignacion() {
         "Desplazamiento registrado",
         "success"
       ).then((value) => {
-        window.location.href = "../views/index.php?view=desplazamientos";
+        window.location.href = "https://inventario-hbl.000webhostapp.com/sis-inventory-HBL/views/index.php?view=desplazamientos";
       });
       // Aquí puedes realizar otras acciones después de un registro exitoso
     } else {
