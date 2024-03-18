@@ -45,12 +45,12 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-4">
-                            <label for=""> N° Registro
+                            <label for="txt_cod_actualizar"> N° Registro
                                 <input type="text" id="txt_cod_actualizar" placeholder="Número de registro" class="form-control" readonly onpaste="return false">
                             </label>
                         </div>
                         <div class="col-md-4">
-                            <label for="">Fecha
+                            <label for="fecha_actualizar">Fecha
                                 <input type="date" class="form-control" id="fecha_actualizar" name="fecha_actualizar">
                             </label>
                         </div>

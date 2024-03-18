@@ -47,16 +47,16 @@
                         <div class="row">
                             <!-- Columna 1 -->
                             <div class="col-md-4">
-                                <label for="">Cod. Patrimonial
+                                <label for="txt_cod">Cod. Patrimonial
                                 <input type="text" id="txt_cod" placeholder="Ingresar código" 
                                 class="form-control" onpaste="return false">
                                 </label>
 
-                                <label for="">Nombre
+                                <label for="txt_nombre">Nombre
                                 <input type="text" id="txt_nombre" placeholder="Ingresar nombre del switch" 
                                 class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
                                 </label>
-                                <label for="">Seleccione Marca
+                                <label for="select_marca">Seleccione Marca
                                     <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                     <option value="D-LINK">D-LINK</option>
                                     <option value="ZyXel">ZyXel</option>
@@ -73,28 +73,28 @@
                             <!-- Columna 2 -->
                             <div class="col-md-4">
 
-                                <label for="">Modelo
+                                <label for="txt_modelo">Modelo
                                     <input type="text" id="txt_modelo" placeholder="Ingresar modelo" 
                                     class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
                                 </label>
 
-                                <label for="">Serie
+                                <label for="txt_serie">Serie
                                     <input type="text" id="txt_serie" placeholder="Ingresar serie" 
                                     class="form-control" onpaste="return false">
                                 </label>
-                                <label for="">Puertos
+                                <label for="txt_puerto">Puertos
                                     <input type="number" id="txt_puerto" placeholder="Ingresar n° de puerto" 
                                     class="form-control" min="0" onpaste="return false">
                                 </label>
                             </div>
                             <div class="col-md-4">
-                                <label for="">Área
+                                <label for="select_area">Área
                                     <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                     </select>
 
                                 </label><br>
-                                <label for="">Estado</label>
+                                <label for="select_estado">Estado</label>
                                     <select class="form-control" name="select_estado" id="select_estado" style="width:100%;">
                                         <option value="BUENO">BUENO</option>
                                         <option value="MALO">MALO</option>
@@ -126,11 +126,11 @@
                     <div class="row">
                         <!-- Columna 1 -->
                         <div class="col-md-4">
-                            <label for="">Nombre
+                            <label for="txt_nombre_editar">Nombre
                                 <input type="text" id="txt_nombre_editar" class="form-control">
                             </label>
                                                         
-                            <label for="">Seleccione Marca
+                            <label for="txt_cod_editar">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
                                 <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="D-LINK">D-LINK</option>
@@ -145,7 +145,7 @@
                                 <option value="Netgear">Netgear</option>  
                                 </select>
                             </label>
-                            <label for="">Modelo
+                            <label for="txt_modelo_editar">Modelo
                             <input type="text" id="txt_modelo_editar" class="form-control">
                             </label>
                             
@@ -153,21 +153,21 @@
                         </div>
                         <!-- Columna 2 -->
                         <div class="col-md-4">
-                            <label for="">Serie
+                            <label for="txt_serie_editar">Serie
                                 <input type="text" id="txt_serie_editar" class="form-control">
                             </label>
-                            <label for=""> Puertos
+                            <label for="txt_puerto_editar"> Puertos
                             <input type="number" id="txt_puerto_editar" class="form-control" min="0" onpaste="return false">
                             </label>
                         </div>
                         <!-- Columna 3 -->
                         <div class="col-md-4">
-                            <label for="">Seleccione Área
+                            <label for="select_area_editar">Seleccione Área
                             <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>
-                            <label for="">Estado</label>
+                            <label for="select_estado_editar">Estado</label>
                             <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>

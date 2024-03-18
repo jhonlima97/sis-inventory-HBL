@@ -8,8 +8,8 @@
 
     <div class="row mb-4" style="margin-top: 10px;">
         <div class="col-md-8"> <!-- Utiliza la clase "col-md-6" para que ambos elementos ocupen la mitad del ancho en dispositivos medianos y grandes -->
-            <label for="form-control">Seleccione Un Tipo de bien para ver su Reporte</label>
-            <div class="d-flex"> <!-- Utiliza la clase "d-flex" para establecer un contenedor flexible y ajustar los elementos dentro -->
+            <label for="select_bien">Seleccione Un Tipo de bien para ver su Reporte</label>
+            <div class="d-flex">
                 <select class="form-control" name="select_bien" id="select_bien" style="width:70%;"> <!-- Ajusta el ancho según sea necesario -->
                 <option value="" selected>Seleccione uno</option> <!-- Modificado para iniciar seleccionado -->
                     <option value="COMPUTADORAS">COMPUTADORAS</option>

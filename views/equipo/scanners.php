@@ -46,11 +46,11 @@
                     <div class="row">
                         <!-- Columna 1 -->
                         <div class="col-md-4">
-                            <label for="">Cod. Patrimonial
+                            <label for="txt_cod">Cod. Patrimonial
                             <input type="text" id="txt_cod" placeholder="Ingresar código" 
                             class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Seleccione Marca
+                            <label for="select_marca">Seleccione Marca
                                 <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="EPSON">EPSON</option>
                                 <option value="CANON">CANON</option>
@@ -59,39 +59,39 @@
                                 <option value="BROTHER">BROTHER</option>
                                 </select>
                             </label>
-                            <label for="">Modelo
+                            <label for="txt_modelo">Modelo
                             <input type="text" id="txt_modelo" placeholder="Ingresar modelo" 
                             class="form-control" onpaste="return false">
                             </label>
-                        </div> 
+                        </div>
                         <!-- Columna 2 -->
                         <div class="col-md-4">
-                            <label for="">Serie
+                            <label for="txt_serie">Serie
                                 <input type="text" id="txt_serie" placeholder="Ingresar serie" 
                                 class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Sistema Operativo
+                            <label for="txt_sis_ope">Sistema Operativo
                             <input type="text" id="txt_sis_ope" placeholder="Ingresar nombre del sistema operativo" 
                             class="form-control" onpaste="return false">
                             </label>
 
-                            <label for="">Velocidad
+                            <label for="txt_velocidad">Velocidad
                             <input type="text" id="txt_velocidad" placeholder="Ingresar nombre del sistema operativo" 
                             class="form-control" onpaste="return false">
                             </label>
                         </div>
 
                         <div class="col-md-4">
-                            <label for="">Resolución
+                            <label for="txt_resolucion">Resolución
                                 <input type="text" id="txt_resolucion" placeholder="Ingresar nombre del sistema operativo" 
                                 class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Área
+                            <label for="select_area">Área
                                 <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                 </select>
                                 </label><br>
-                                <label for="">Estado</label>
+                                <label for="select_estado">Estado</label>
                                 <select class="form-control" name="select_estado" id="select_estado" style="width:70%;">
                                     <option value="BUENO">BUENO</option>
                                     <option value="MALO">MALO</option>
@@ -123,7 +123,7 @@
                         <!-- Columna 1 -->
                         <div class="col-md-4">
                                                         
-                            <label for="">Seleccione Marca
+                            <label for="txt_cod_editar">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
                                 <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="CANON">CANON</option>
@@ -133,33 +133,33 @@
                                 <option value="BROTHER">BROTHER</option>
                                 </select>
                             </label>
-                            <label for="">Modelo
+                            <label for="txt_modelo_editar">Modelo
                             <input type="text" id="txt_modelo_editar" class="form-control">
                             </label>
-                            <label for="">Serie
+                            <label for="txt_serie_editar">Serie
                             <input type="text" id="txt_serie_editar" class="form-control">
                             </label>
                         </div>
                         <!-- Columna 2 -->
                         <div class="col-md-4">
-                            <label for="">Sistema operativo
+                            <label for="txt_so_editar">Sistema operativo
                             <input type="text" id="txt_so_editar" class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Velocidad
+                            <label for="txt_velocidad_editar">Velocidad
                             <input type="text" id="txt_velocidad_editar" class="form-control">
                             </label>
-                            <label for="">Resolución
+                            <label for="txt_resol_editar">Resolución
                             <input type="text" id="txt_resol_editar" class="form-control" onpaste="return false">
                             </label>
                         </div>
                         <!-- Columna 3 -->
                         <div class="col-md-4">
-                            <label for="">Seleccione Área
+                            <label for="select_area_editar">Seleccione Área
                             <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>
-                            <label for="">Estado</label>
+                            <label for="select_estado_editar">Estado</label>
                             <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>
