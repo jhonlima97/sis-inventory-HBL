@@ -65,7 +65,7 @@ if ($pdo) {
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- MENU DE AREAS -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a class="nav-link">
                 <i class="fa fa-hospital-o"></i>
                 <p>
                   Áreas Hospitalarias
@@ -75,7 +75,7 @@ if ($pdo) {
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="../views/index.php?view=areas" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                    <i class="fa fa-hospital-o nav-icon"></i>
                     <p>Áreas</p>
                   </a>
                 </li>
@@ -84,7 +84,7 @@ if ($pdo) {
           </li>
           <!-- MENU DE EQUIPOS -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a class="nav-link">
               <i class="fas fa-keyboard"></i>
                 <p>
                   Equipos informáticos
@@ -143,7 +143,7 @@ if ($pdo) {
           </li>
           <!-- MENU DE REPORTES -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a class="nav-link">
               <i class="fa fa-file"></i>
                 <p>
                   Reportes Inventario
@@ -179,18 +179,18 @@ if ($pdo) {
           </li>
           <!-- MENU USUARIOS -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
-              <i class="fa fa-user"></i>
+              <a class="nav-link">
+              <i class="fa fa-users"></i>
                 <p>
-                  Usuarios
+                  Gestión De Usuarios
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="../views/index.php?view=usuarios" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Gestion de Usuarios</p>
+                    <i class="fa fa-user nav-icon"></i>
+                    <p>Usuarios</p>
                   </a>
                 </li>
                 
@@ -207,7 +207,7 @@ if ($pdo) {
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a class="nav-link">
               <i class="fa fa-hospital-o"></i>
                 <p>
                   Reportes Inventario
