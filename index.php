@@ -19,7 +19,7 @@ if (isset($_SESSION['S_ID'])) {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="libs/css/login.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="libs/css/fontawesome-free/css/all.min.css">
   
   <!-- Theme style -->
   <link rel="stylesheet" href="libs/css/adminlte.min.css">
@@ -109,13 +109,16 @@ if (isset($_SESSION['S_ID'])) {
 </div>
 
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
 <!-- AdminLTE App -->
 <script src="libs/js/adminlte.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js"></script>
-<script src="libs/js/login.js"></script>
+
+<script src="libs/js/login.js?rev=<?php echo time();?>"></script>   <!-- para Volver a recargar el js  -->
 <script src="libs/js/usuario.js?rev=<?php echo time();?>"></script>   <!-- para Volver a recargar el js  -->
 
 

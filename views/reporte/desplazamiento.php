@@ -11,7 +11,6 @@
         </div>
     </div>
 
-
     <!-- Agrega la tabla con DataTable -->
     <table id="tbl_desplazamientos" class="table table-striped table-bordered" style="width: 100%;">
         <thead>
@@ -32,8 +31,6 @@
 
         </tbody>
     </table>
-
-
 
     <!-- Inicio Modal Editar fecha-->
     <div class="modal fade" id="modal_reporte_fecha" aria-hidden="true">
@@ -101,10 +98,8 @@
         </div>
     </div>
 
-
-
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 <script src="../libs/js/desplazamientos.js"></script>

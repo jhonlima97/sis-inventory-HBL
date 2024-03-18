@@ -30,7 +30,7 @@ class PDF extends FPDF
             $this->SetTextColor(0, 0, 0); //color
     
             $this->Cell(0, 10, utf8_decode("Hospital Provincial Docente"), 0, 1, 'C', 0);
-            $this->Cell(0, 10, utf8_decode('"Belén" Lambayeque'), 0, 1, 'C', 0);
+            $this->Cell(0, 10, utf8_decode("Belén Lambayeque"), 0, 1, 'C', 0);
     
             $this->Ln(3); // Salto de línea
     

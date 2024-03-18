@@ -39,11 +39,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12">
-                            <label for="">Nombre de Área</label>
+                            <label for="txt_nombre">Nombre de Área</label>
                             <input type="text" id="txt_nombre" placeholder="Ingresar area" 
                             class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
                             
-                            <label for="">Responsable Funcional</label>
+                            <label for="txt_responsable">Responsable Funcional</label>
                             <input type="text" id="txt_responsable" placeholder="Ingresar responsable" 
                             class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
                         
@@ -75,11 +75,11 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12">
-                            <label for="">Nombre Área</label>
+                            <label for="txt_nombre_editar">Nombre Área</label>
                             <input type="text" id="txt_idarea_editar" hidden>
                             <input type="text" id="txt_nombre_editar" class="form-control" 
                             onkeypress="return validaLetras(event);" onpaste="return false">
-                            <label for="">Responsable Funcional</label>
+                            <label for="txt_responsable_editar">Responsable Funcional</label>
                             <input type="text" id="txt_responsable_editar" class="form-control" 
                             onkeypress="return validaLetras(event);" onpaste="return false">
                         </div>

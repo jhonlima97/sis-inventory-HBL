@@ -49,11 +49,11 @@
                     <div class="row">
                         <!-- Columna 1 -->
                         <div class="col-md-4">
-                            <label for="">Cod. Patrimonial
+                            <label for="txt_cod">Cod. Patrimonial
                             <input type="text" id="txt_cod" placeholder="Ingresar código" 
                             class="form-control">
                             </label>
-                            <label for="">Seleccione Marca
+                            <label for="select_marca">Seleccione Marca
                                 <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="HP">HP</option>
                                 <option value="TOSHIBA">TOSHIBA</option>
@@ -66,32 +66,32 @@
                                 <option value="ACER">ACER</option> 
                                 </select>
                             </label>
-                            <label for="">Modelo
+                            <label for="txt_modelo">Modelo
                             <input type="text" id="txt_modelo" placeholder="Ingresar modelo" 
                             class="form-control" onpaste="return false">
                             </label>
 
-                            <label for="">Serie
+                            <label for="txt_serie">Serie
                             <input type="text" id="txt_serie" placeholder="Ingresar serie" 
                             class="form-control">
                             </label>
                         </div> 
                         <!-- Columna 2 -->
                         <div class="col-md-4">
-                            <label for="">Sistema operativo
+                            <label for="txt_so">Sistema operativo
                             <input type="text" id="txt_so" placeholder="Ingresar SO" 
                             class="form-control" onpaste="return false">
                             </label>
 
-                            <label for="">IP *Opcional*
+                            <label for="txt_ip">IP *Opcional*
                             <input type="text" id="txt_ip" placeholder="Ingresar IP" class="form-control">
                             </label>
-                            <label for="">Procesador
+                            <label for="txt_procesador">Procesador
                             <input type="text" id="txt_procesador" placeholder="Ingresar procesador" 
                             class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Memoria RAM
-                                <select class="form-control select2-dropdown" name="select_ram" id="select_ram" style="width:100%;">
+                            <label for="select_ram">Memoria RAM
+                                <select class="form-control" name="select_ram" id="select_ram" style="width:100%;">
                                 <option value="2GB">2GB</option>
                                 <option value="4GB">4GB</option>
                                 <option value="8GB">8GB</option>
@@ -104,16 +104,16 @@
                         <!-- Columna 3 -->
                         <div class="col-md-4">
                             
-                            <label for="">Disco
+                            <label for="txt_disco">Disco
                             <input type="text" id="txt_disco" placeholder="Ingresar disco" 
                             class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Área
+                            <label for="select_area">Área
                             <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             </label><br>
-                            <label for="">Estado
+                            <label for="select_estado">Estado
                             <select class="form-control" name="select_estado" id="select_estado" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>
@@ -145,7 +145,7 @@
                         <!-- Columna 1 -->
                         <div class="col-md-4">
                                                         
-                            <label for="">Seleccione Marca
+                            <label for="txt_cod_editar">Seleccione Marca
                                 <input type="text" id="txt_cod_editar" hidden>
                                 <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                     <option value="HP">HP</option>
@@ -159,26 +159,26 @@
                                     <option value="ACER">ACER</option> 
                                 </select>
                             </label>
-                            <label for="">Modelo
+                            <label for="txt_modelo_editar">Modelo
                             <input type="text" id="txt_modelo_editar" class="form-control">
                             </label>
-                            <label for="">Serie
+                            <label for="txt_serie_editar">Serie
                             <input type="text" id="txt_serie_editar" class="form-control">
                             </label>
-                            <label for="">Sistema operativo
+                            <label for="txt_so_editar">Sistema operativo
                             <input type="text" id="txt_so_editar" class="form-control" onpaste="return false">
                             </label>
                         </div>
                         <!-- Columna 2 -->
                         <div class="col-md-4">
-                            <label for="">IP *Opcional*
+                            <label for="txt_ip_editar">IP *Opcional*
                             <input type="text" id="txt_ip_editar" class="form-control">
                             </label>
-                            <label for="">Procesador
+                            <label for="txt_procesador_editar">Procesador
                             <input type="text" id="txt_procesador_editar" class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Memoria RAM
-                                <select class="form-control select2-dropdown" name="select_ram_editar" id="select_ram_editar" style="width:100%;">
+                            <label for="select_ram_editar">Memoria RAM
+                                <select class="form-control" name="select_ram_editar" id="select_ram_editar" style="width:100%;">
                                 <option value="2GB">2GB</option>
                                 <option value="4GB">4GB</option>
                                 <option value="8GB">8GB</option>
@@ -190,15 +190,16 @@
                         </div>
                         <!-- Columna 3 -->
                         <div class="col-md-4">
-                            <label for="">Disco
+                            <label for="txt_disco_editar">Disco
                             <input type="text" id="txt_disco_editar" class="form-control" onpaste="return false">
                             </label>
-                            <label for="">Seleccione Área
-                                <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
+                            <label for="select_area_editar">Seleccione Área
+                                <select class="form-control select2-dropdown" 
+                                    name="select_area_editar" id="select_area_editar" style="width:100%;">
                                     <!-- Opciones de área en js -->
                                 </select>
                             </label><br>
-                            <label for="">Estado
+                            <label for="select_estado_editar">Estado
                             <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>

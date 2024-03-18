@@ -44,11 +44,11 @@
                     <div class="row">
                         <!-- Columna 1 -->
                         <div class="col-md-6">
-                            <label for="">Cod. Patrimonial</label>
+                            <label for="txt_cod">Cod. Patrimonial</label>
                             <input type="text" id="txt_cod" placeholder="Ingresar código" 
                             class="form-control" onpaste="return false">
                             
-                            <label for="">Seleccione Marca</label>
+                            <label for="select_marca">Seleccione Marca</label>
                                 <select class="form-control select2-dropdown" name="select_marca" id="select_marca" style="width:100%;">
                                 <option value="Canon">Canon</option>
                                 <option value="Brother">Brother</option>
@@ -58,29 +58,29 @@
                                 <option value="Xerox">Xerox</option>
                                 </select>
                             
-                            <label for="">Modelo</label>
+                            <label for="txt_modelo">Modelo</label>
                             <input type="text" id="txt_modelo" placeholder="Ingresar modelo" 
                             class="form-control" onpaste="return false">
                             
 
-                            <label for="">Serie</label>
+                            <label for="txt_serie">Serie</label>
                             <input type="text" id="txt_serie" placeholder="Ingresar serie" 
                             class="form-control" onpaste="return false">
                             
                         </div> 
                         <!-- Columna 2 -->
                         <div class="col-md-6">
-                            <label for="">N° Toner</label>
+                            <label for="txt_toner">N° Toner</label>
                             <input type="text" id="txt_toner" placeholder="Ingresar número de toner" 
                             class="form-control" onpaste="return false">
                             
 
-                            <label for="">Área</label>
+                            <label for="select_area">Área</label>
                             <select class="form-control select2-dropdown" name="select_area" id="select_area" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
                             
-                            <label for="">Estado</label>
+                            <label for="select_estado">Estado</label>
                             <select class="form-control" name="select_estado" id="select_estado" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>
@@ -112,7 +112,7 @@
                         <!-- Columna 1 -->
                         <div class="col-md-6">
                                                         
-                            <label for="">Seleccione Marca</label>
+                            <label for="txt_cod_editar">Seleccione Marca</label>
                                 <input type="text" id="txt_cod_editar" hidden>
                                 <select class="form-control select2-dropdown" name="select_marca_editar" id="select_marca_editar" style="width:100%;">
                                 <option value="Canon">Canon</option>
@@ -123,26 +123,26 @@
                                 <option value="Xerox">Xerox</option>
                                 </select>
                             
-                            <label for="">Modelo</label>
+                            <label for="txt_modelo_editar">Modelo</label>
                             <input type="text" id="txt_modelo_editar" class="form-control">
                             
-                            <label for="">Serie</label>
+                            <label for="txt_serie_editar">Serie</label>
                             <input type="text" id="txt_serie_editar" class="form-control">
                             
                         </div>
                         <!-- Columna 2 -->
                         <div class="col-md-6">
-                            <label for="">N° Toner</label>
+                            <label for="txt_toner_editar">N° Toner</label>
                                 <input type="text" id="txt_toner_editar" class="form-control" onpaste="return false">
                             
 
-                            <label for="">Seleccione Área</label>
+                            <label for="select_area_editar">Seleccione Área</label>
                             <select class="form-control select2-dropdown" name="select_area_editar" id="select_area_editar" style="width:100%;">
                                 <!-- Opciones de área en js -->
                             </select>
 
 
-                            <label for="">Estado</label>
+                            <label for="select_estado_editar">Estado</label>
                             <select class="form-control" name="select_estado_editar" id="select_estado_editar" style="width:100%;">
                                 <option value="BUENO">BUENO</option>
                                 <option value="MALO">MALO</option>
