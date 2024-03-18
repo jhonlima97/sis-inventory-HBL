@@ -92,7 +92,7 @@
                             </label>
                             <label for="txt_procesador">Procesador
                             <input type="text" id="txt_procesador" placeholder="Ingresar procesador" 
-                            class="form-control" onkeypress="return validaLetras(event);" onpaste="return false">
+                            class="form-control" onpaste="return false">
                             </label>
 
                             
