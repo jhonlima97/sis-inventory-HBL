@@ -4,6 +4,22 @@ setlocale(LC_TIME, 'es_ES.UTF-8');
 
 require('./fpdf.php');
 //require_once 'conexionbd.php';
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
+$dotenv->load();
+
+$servername = $_ENV['DB_HOST'];
+$username   = $_ENV['DB_USER'];
+$password   = $_ENV['DB_PASS'];
+$dbname     = $_ENV['DB_NAME'];
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$conn->query("SET NAMES 'utf8'");
+if ($conn->connect_error) {
+   die("Error de conexión a la base de datos: " . $conn->connect_error);
+}
 
 class PDF extends FPDF
 {
@@ -53,19 +69,6 @@ class PDF extends FPDF
 
    }
 }
-
-
-$servername = "localhost";
-$dbname = 'id21977262_inventario';
-$username = 'id21977262_root';
-$password = '123456@Gaby';
-    
-$conn = new mysqli($servername, $username, $password, $dbname);
-$conn->query("SET NAMES 'utf8'");
-if ($conn->connect_error) {
-   die("Error de conexión a la base de datos: " . $conn->connect_error);
-}
-
 
 //Crear el PDF
 $pdf = new PDF();
