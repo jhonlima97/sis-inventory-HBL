@@ -67,7 +67,7 @@ if (isset($_SESSION['S_ID'])) {
       <!-- Pregunta secreta -->
       <div class="input-group" id="preguntaSecreta" style="display: none;">
         <div class="input-group-prepend">
-          <label class="input-group-text" for="pregunta">Pregunta Secreta:</label>
+          <label class="input-group-text">Pregunta Secreta:</label>
           <p class="form-control" id="pregunta"></p>
         </div>
         <div class="input-group-prepend">

@@ -1,13 +1,20 @@
 <?php
 setlocale(LC_TIME, 'es_ES.UTF-8');
 require('./fpdf.php');
+
 //require_once 'conexionbd.php';
-$servername = "localhost";
-$username   = "root";
-$password   = "ADMINPHP";
-$dbname     = "inventario_belen";
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../..');
+$dotenv->load();
+
+$servername = $_ENV['DB_HOST'];
+$username   = $_ENV['DB_USER'];
+$password   = $_ENV['DB_PASS'];
+$dbname     = $_ENV['DB_NAME'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 $conn->query("SET NAMES 'utf8'");
 if ($conn->connect_error) {
     die("Error de conexión a la base de datos: " . $conn->connect_error);
