@@ -9,6 +9,7 @@
             </button>
         </div>
     </div>
+    <!-- Hola -->
 
     <!-- Agrega la tabla con DataTable -->
     <table id="tbl_area" class="table table-striped table-bordered">
