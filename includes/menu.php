@@ -190,7 +190,7 @@ if ($pdo) {
                 <li class="nav-item">
                   <a href="../views/index.php?view=usuarios" class="nav-link">
                     <i class="fa fa-user nav-icon"></i>
-                    <p>Usuarios</p>
+                    <p>Usuarios - Roles</p>
                   </a>
                 </li>
                 
