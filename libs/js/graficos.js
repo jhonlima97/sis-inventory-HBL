@@ -12,21 +12,19 @@ function getNumEquiposBar1() {
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
-            let equipo = [];
+            let equipo   = [];
             let cantidad = [];
-            let colors = [];
-            let data = JSON.parse(resp);
-            
+            let colors   = [];
+            let data     = JSON.parse(resp);
             for (let i = 0; i < data.length; i++) {
                 equipo.push(data[i].equipo);
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo,cantidad, colors,'bar','x','GRÁFICO VERTICAL DE EQUIPOS','myChart1');
+            CreateGrafico(equipo, cantidad, colors, 'bar', 'x', 'GRÁFICO BAR VERTICAL', 'myChart1', false);
         }
     })
 }
-
 // Grafico tipo bar Horizontal
 function getNumEquiposBar2() {
     $.ajax({
@@ -44,12 +42,11 @@ function getNumEquiposBar2() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo,cantidad, colors,'bar','y','GRÁFICO HORIZONTAL DE EQUIPOS','myChart2');
+            CreateGrafico(equipo, cantidad, colors,'bar','y','GRÁFICO BAR HORIZONTAL','myChart2', false);
         }
         
     })
 }
-
 // Grafico Pastel tipo pie
 function getNumEquiposPie3() {
     $.ajax({
@@ -57,23 +54,21 @@ function getNumEquiposPie3() {
         type: 'POST',
     }).done(function(resp) {
         if(resp.length>0) {
-            let equipo = [];
+            let equipo   = [];
             let cantidad = [];
-            let colors = [];
-            const data = JSON.parse(resp);
+            let colors   = [];
+            const data   = JSON.parse(resp);
             
             for (let i = 0; i < data.length; i++) {
                 equipo.push(data[i].equipo);
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo,cantidad, colors, 'pie','','GRÁFICO PASTEL DE EQUIPOS','myChart3');
+            CreateGrafico(equipo,cantidad, colors, 'pie','', 'GRÁFICO PASTEL', 'myChart3', true);
         }
         
     })
 }
-
-
 // Grafico Pastel tipo doughnut
 function getNumEquiposPie4() {
     $.ajax({
@@ -91,7 +86,7 @@ function getNumEquiposPie4() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo,cantidad, colors,'doughnut','','GRÁFICO DOUGHNUT DE EQUIPOS','myChart4');
+            CreateGrafico(equipo,cantidad, colors,'doughnut','','GRÁFICO DOUGHNUT','myChart4', true);
         }
         
     })
@@ -102,36 +97,64 @@ let myChart2 = null; // Declara myChart fuera de las funciones
 let myChart3 = null; // Declara myChart fuera de las funciones
 let myChart4 = null; // Declara myChart fuera de las funciones
 
-function CreateGrafico(equipo, cantidad, colors,type,indexAxis, header, chartId) {
+function CreateGrafico(equipo, cantidad, colors, type, indexAxis, header, chartId, showLegend = true) {
     const ctx = document.getElementById(chartId);
-   
+
     // Destruye el gráfico anterior si existe
     if (window[chartId] instanceof Chart) {
         window[chartId].destroy();
     }
 
-    window[chartId] = new Chart(ctx, {
+    const commonConfig = {
         type: type,
-        data:{
+        data: {
             labels: equipo,
             datasets: [{
-                label: header,
+                label: 'Cantidad',
                 data: cantidad,
-                backgroundColor:colors,
-                borderColor:colors,
+                backgroundColor: colors,
+                borderColor: colors,
                 borderWidth: 1
             }]
         },
         options: {
-            indexAxis: indexAxis, //tipo de bar
-            scales: {
-                y: {
-                    beginAtZero: true
+            plugins: {
+                title: {
+                    display: true,
+                    text: header,
+                    font: {
+                        size: 16
+                    },
+                    padding: {
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                legend: {
+                    display: showLegend,
+                    position: 'top',
+                    labels: {
+                        boxWidth: 20,
+                        padding: 15
+                    }
                 }
             }
         }
-    });
+    };
+
+    // Ajustes para gráficos de barras
+    if (type === 'bar') {
+        commonConfig.options.indexAxis = indexAxis;
+        commonConfig.options.scales = {
+            y: {
+                beginAtZero: true
+            }
+        };
+    }
+
+    window[chartId] = new Chart(ctx, commonConfig);
 }
+
 
 // Gerenate color random JS
 function generateNumber(number) {
@@ -201,7 +224,7 @@ function getGraficoParams1() {
             let cantidad = [];
             let colors = [];
             let data = JSON.parse(resp);
-            
+            console.log(JSON.stringify(data));
             for (let i = 0; i < data.length; i++) {
                 //labels.push(data[i].new_responsable + ' (' + data[i].equipo + ')');
                 equipo.push(data[i].equipo);
@@ -209,7 +232,7 @@ function getGraficoParams1() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo, cantidad, colors,'bar','x','GRÁFICO VERTICAL DESPLAZAMIENTOS','myChart1_param');
+            CreateGrafico(equipo, cantidad, colors,'bar','x','GRÁFICO BAR VERTICAL','myChart1_param', false);
         }   
     })
 }
@@ -240,7 +263,7 @@ function getGraficoParams2() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo, cantidad, colors,'pie','','GRÁFICO PASTEL DE EQUIPOS','myChart2_param');
+            CreateGrafico(equipo, cantidad, colors,'pie','','GRÁFICO PASTEL','myChart2_param', false);
         }   
     })
 }
@@ -271,7 +294,7 @@ function getGraficoParams3() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo, cantidad, colors,'doughnut','','GRÁFICO DOUGHNUT DESPLAZAMIENTOS','myChart3_param');
+            CreateGrafico(equipo, cantidad, colors,'doughnut','','GRÁFICO DOUGHNUT','myChart3_param', false);
         }   
     })
 }
@@ -302,7 +325,7 @@ function getGraficoParams4() {
                 cantidad.push(data[i].cantidad);
                 colors.push(colorRGB());
             }
-            CreateGrafico(equipo, cantidad, colors,'bar','y','GRÁFICO HORIZONTAL DESPLAZAMIENTOS','myChart4_param');
+            CreateGrafico(equipo, cantidad, colors,'bar','y','GRÁFICO BAR HORIZONTAL','myChart4_param', false);
         }   
     })
 }

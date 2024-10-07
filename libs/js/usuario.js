@@ -6,8 +6,7 @@ function Login() {
         return Swal.fire('Mensaje de Advertencia', 'Ingrese los datos de sesión', 'warning');
     }
     $.ajax({
-
-        url:'http://localhost/inventario_belen/controllers/usuario/login.php',
+        url:'http://localhost/inventario_belen/sis-inventory-HBL/controllers/usuario/login.php',
         type: 'POST',
         data: {
             e: email,
@@ -44,8 +43,7 @@ function Login() {
 
 function redireccionarUsuario(userData) {
     $.ajax({
-        //url: 'http://localhost:8080/inventario_belen/controllers/usuario/crear_sesion.php',
-        url: 'http://localhost/inventario_belen/controllers/usuario/crear_sesion.php',
+        url: 'http://localhost/inventario_belen/sis-inventory-HBL/controllers/usuario/crear_sesion.php',
         type: 'POST',
         data: {
             id: userData.id,
