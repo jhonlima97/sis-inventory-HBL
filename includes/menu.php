@@ -11,7 +11,6 @@ $pdo = $conexion->conexion();
 $nombre_usuario = ""; // Inicializamos la variable
 
 if ($pdo) {
-    // Obtener el ID del usuario logueado (suponiendo que está almacenado en $_SESSION)
     $usuario_id = $_SESSION['S_ID'];
     $usuario_rol = $_SESSION['S_ROL'];
 
@@ -35,13 +34,11 @@ if ($pdo) {
 ?>
 
 <aside class="main-sidebar sidebar-dark-primary">
-    <!-- Brand Logo -->
     <a href="../views/index.php" class="brand-link">
       <img src="../libs/images/hospital.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
       <span class="brand-text font-weight-light"><b>SIS</b> INVENTARIO <b>HBL</b></span>
     </a>
     
-
     <!-- Perfil de usuario -->
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -49,16 +46,16 @@ if ($pdo) {
             <img src="../libs/images/user.png" class="img-circle" style="height:35px; width:35px;" alt="User Image">
         </div>
         <div class="info">
-            <a class="d-block" id="nombreUsuario" style="text-decoration: none;"><?php echo $nombre_usuario; ?></a>
-            <a href="../controllers/usuario/logout.php" id="cerrarSesionBtn" class="btn btn-warning mt-2" 
-            style="display: none; color:black; font-weight:bolder">Cerrar Sesión</a>
+          <a class="d-block" id="nombreUsuario" style="text-decoration: none;"><?php echo $nombre_usuario; ?></a>
+          <a href="../controllers/usuario/logout.php" id="cerrarSesionBtn" class="btn btn-warning mt-2" 
+          style="display: none; color:black; font-weight:bolder">Cerrar Sesión</a>
         </div>
       </div>
 
       <?php
       // Mostrar/ocultar opciones de menú según el rol del usuario
       if ($usuario_rol == 'ADMINISTRADOR') {
-          // Mostrar todas las opciones del menú
+        // Mostrar todas las opciones del menú
       ?>
       <!-- MENUS -->
       <nav class="mt-2">

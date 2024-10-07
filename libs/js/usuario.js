@@ -32,7 +32,6 @@ function Login() {
         console.log('Error de AJAX:', textStatus, errorThrown);
         Swal.fire('Error', 'Error de AJAX. Detalles: ' + textStatus, 'error');
     });
-
 }
 
 function redireccionarUsuario(userData) {
@@ -217,7 +216,6 @@ function Registrar_Usuario() {
     
     
 }
-
 
 // Abrir el modal de Modificar y cargar los datos de acuerdo a cada usuario
 $('#tbl_usuario').on('click', '.editar', function () {

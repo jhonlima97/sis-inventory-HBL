@@ -20,30 +20,24 @@ if (isset($_SESSION['S_ID'])) {
   <link rel="stylesheet" href="libs/css/login.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="libs/css/fontawesome-free/css/all.min.css">
-  
   <!-- Theme style -->
   <link rel="stylesheet" href="libs/css/adminlte.min.css">
-  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css">
 
 </head>
 
-
 <body class="body-wallpaper">
 
-<div class="container" id="loginForm">
+  <div class="container" id="loginForm">
     <form onsubmit="Login(); return false;" class="form">
         <h2>Iniciar sesión</h2>
-        
         <!-- Campo de correo electrónico -->
-        <input type="email" class="input" placeholder="Ingrese su email" id="txtEmail" required>
-        
+        <input type="email" class="input" placeholder="Ingrese su email" id="txtEmail">
         <!-- Campo de contraseña con opción para mostrar/ocultar -->
         <div class="input-container">
-            <input type="password" class="input" placeholder="Ingrese su contraseña" id="txtPass" autocomplete="off" required>
+            <input type="password" class="input" placeholder="Ingrese su contraseña" id="txtPass" autocomplete="off">
             <i class="fas fa-eye-slash toggle-password" onclick="togglePasswordVisibility()" style="cursor: pointer; color:grey;"></i>
         </div>
-
         <!-- Enlace para recuperar contraseña -->
         <a href="#" onclick="mostrarFormulario('recuperar')">¿Olvidaste tu contraseña?</a>
 
@@ -53,74 +47,71 @@ if (isset($_SESSION['S_ID'])) {
 
     <!-- Video de fondo o lateral -->
     <div class="side" id="sideLogin">
-        <video autoplay loop muted>
-            <source src="libs/images/informatic2.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
+      <video autoplay loop muted>
+        <source src="libs/images/informatic2.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
-</div>
+  </div>
 
-
-<div class="container" id="RecuperarForm" style="display: none;">
-  <form class="form" onsubmit="event.preventDefault(); mostrarPreguntaSecreta();">
-      <h2>Recuperar Contraseña</h2>
-
-      <!-- Campo de correo electrónico -->
-      <div class="input-group mb-3">
-          <label class="input-group-text" for="correo">Correo Electrónico:</label>
-          <input type="email" class="form-control" id="correo" required>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-      </div>
-
-      <!-- Pregunta secreta -->
-      <div class="input-group" id="preguntaSecreta" style="display: none;">
-        <div class="input-group-prepend">
-          <label class="input-group-text">Pregunta Secreta:</label>
-          <p class="form-control" id="pregunta"></p>
-        </div>
-        <div class="input-group-prepend">
-          <input type="text" class="form-control" id="respuestaInput" placeholder="Ingrese su respuesta" autocomplete="off" style="display: none;">
-          <button type="button" class="btn btn-primary" onclick="validarRespuesta()">Validar</button>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Nuevas contraseñas -->
-      <div id="nuevasContrasenas" style="display: none;">
+  <div class="container" id="RecuperarForm" style="display: none;">
+    <form class="form" onsubmit="event.preventDefault(); mostrarPreguntaSecreta();">
+        <h2>Recuperar Contraseña</h2>
+        <!-- Campo de correo electrónico -->
         <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Nueva Contraseña:</span>
-          </div>
-          <input type="password" class="form-control" id="nuevaContrasena" placeholder="Ingrese su nueva contraseña" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-          
+            <label class="input-group-text" for="correo">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="correo" required>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
 
-        <div class="input-group mb-3">
+        <!-- Pregunta secreta -->
+        <div class="input-group" id="preguntaSecreta" style="display: none;">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Confirmar Contraseña:</span>
+            <label class="input-group-text">Pregunta Secreta:</label>
+            <p class="form-control" id="pregunta"></p>
           </div>
-          <input type="password" class="form-control"  id="confirmarContrasena" placeholder="Confirme su nueva contraseña" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          <div class="input-group-prepend">
+            <input type="text" class="form-control" id="respuestaInput" placeholder="Ingrese su respuesta" autocomplete="off" style="display: none;">
+            <button type="button" class="btn btn-primary" onclick="validarRespuesta()">Validar</button>
+          </div>
         </div>
+        <hr>
 
-          <button type="button" class="btn btn-primary btn-block" onclick="cambiarContrasena()">Cambiar Contraseña</button>
+        <!-- Nuevas contraseñas -->
+        <div id="nuevasContrasenas" style="display: none;">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Nueva Contraseña:</span>
+            </div>
+            <input type="password" class="form-control" id="nuevaContrasena" placeholder="Ingrese su nueva contraseña" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Confirmar Contraseña:</span>
+            </div>
+            <input type="password" class="form-control"  id="confirmarContrasena" placeholder="Confirme su nueva contraseña" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+            <button type="button" class="btn btn-primary btn-block" onclick="cambiarContrasena()">Cambiar Contraseña</button>
+        </div>
+        
+        <button type="button" class="btn btn-primary" style="margin:5px;" onclick="mostrarFormulario('login')">Cancelar</button>
+    </form>
+
+      <div class="side" id="sideRecuperar" style="display: none;">
+          <video autoplay loop muted>
+              <source src="libs/images/informatic2.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+          </video>
       </div>
-      
-      <button type="button" class="btn btn-primary" style="margin:5px;" onclick="mostrarFormulario('login')">Cancelar</button>
-  </form>
-
-    <div class="side" id="sideRecuperar" style="display: none;">
-        <video autoplay loop muted>
-            <source src="libs/images/informatic2.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
-    </div>
-</div>
+  </div>
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <!-- Bootstrap 4.6 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- AdminLTE App -->
 <script src="libs/js/adminlte.min.js"></script>
@@ -133,30 +124,29 @@ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9
 <script>
 
   function mostrarFormulario(tipo) {
-  if (tipo === 'login') {
-      document.getElementById('loginForm').style.display = 'flex';
-      document.getElementById('RecuperarForm').style.display = 'none';
-      document.getElementById('sideLogin').style.display = 'block';
-      document.getElementById('sideRecuperar').style.display = 'none';
-      
-      // Restablecer los valores de los campos del formulario de recuperación
-      document.getElementById('correo').value = ''; // Reemplaza 'campoRecuperacion' con el ID real de los campos de tu formulario de recuperación
-      document.getElementById('preguntaSecreta').style.display = 'none';
-      document.getElementById('nuevasContrasenas').style.display = 'none';
-      document.getElementById('respuestaInput').value = ''; 
-      document.getElementById('nuevaContrasena').value = ''; 
-      document.getElementById('confirmarContrasena').value = ''; 
-  
-  } else if (tipo === 'recuperar') {
-      document.getElementById('loginForm').style.display = 'none';
-      document.getElementById('RecuperarForm').style.display = 'flex';
-      document.getElementById('sideLogin').style.display = 'none';
-      document.getElementById('sideRecuperar').style.display = 'block';
+    if (tipo === 'login') {
+        document.getElementById('loginForm').style.display = 'flex';
+        document.getElementById('RecuperarForm').style.display = 'none';
+        document.getElementById('sideLogin').style.display = 'block';
+        document.getElementById('sideRecuperar').style.display = 'none';
+        
+        // Restablecer los valores de los campos del formulario de recuperación
+        document.getElementById('correo').value = '';
+        document.getElementById('preguntaSecreta').style.display = 'none';
+        document.getElementById('nuevasContrasenas').style.display = 'none';
+        document.getElementById('respuestaInput').value = ''; 
+        document.getElementById('nuevaContrasena').value = ''; 
+        document.getElementById('confirmarContrasena').value = ''; 
+    
+    } else if (tipo === 'recuperar') {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('RecuperarForm').style.display = 'flex';
+        document.getElementById('sideLogin').style.display = 'none';
+        document.getElementById('sideRecuperar').style.display = 'block';
+    }
   }
-}
 
   var respuestaBD; // Variable para almacenar la respuesta de la base de datos
-
   function mostrarPreguntaSecreta() {
     var correo = document.getElementById('correo').value;
 
@@ -189,7 +179,6 @@ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9
         },
         error: function() {
             // Maneja los errores de la solicitud AJAX
-            
             Swal.fire({
                     title: "Error",
                     text: "Error al procesar la solicitud.",
@@ -231,12 +220,11 @@ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9
     if (nuevaContrasena === confirmarContrasena) {
         return true; // Las contraseñas coinciden
     } else {
-        
-        Swal.fire({
-            title: "Las contraseñas no coinciden",
-            text: "Por favor, verifíquelas",
-            icon: "error"
-        });
+      Swal.fire({
+          title: "Las contraseñas no coinciden",
+          text: "Por favor, verifíquelas",
+          icon: "error"
+      });
 
         return false; // Las contraseñas no coinciden
     }
@@ -290,8 +278,6 @@ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9
         toggleIcon.classList.add('fa-eye-slash');
     }
   }
-
-
 </script>
 
 </body>

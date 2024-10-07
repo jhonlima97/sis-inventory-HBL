@@ -58,12 +58,12 @@ if (!isset($_SESSION['S_ID'])) {
         $pageTitle = 'Perifericos';
         include_once "../includes/header.php";
         include('equipo/perifericos.php');
-      break;
+        break;
       case 'patrimonio':
         $pageTitle = 'Patrimonio';
         include_once "../includes/header.php";
         include('reporte/reportes.php');
-      break;
+        break;
       case 'desplazamientos':
         $pageTitle = 'Desplazamientos';
         include_once "../includes/header.php";
@@ -73,7 +73,7 @@ if (!isset($_SESSION['S_ID'])) {
         $pageTitle = 'Desplazamientos';
         include_once "../includes/header.php";
         include('reporte/registro_desplazamiento.php');
-      break;
+        break;
       
       default:
         // Manejar otros casos si el parámetro no coincide con ninguna vista conocida
@@ -89,9 +89,9 @@ if (!isset($_SESSION['S_ID'])) {
   <!-- Contenido del Dashboard -->
   <body>
       <div class="col-md-4">
-          <h2 class="etiqueta-inventario">Bienvenido a <br>
-              <span class="contenedor-celeste">Belen Informatics</span>
-          </h2>         
+        <h2 class="etiqueta-inventario">Bienvenido a <br>
+          <span class="contenedor-celeste">Belen Informatics</span>
+        </h2>         
       </div> 
       <div class="col-md-4">               
           <img class="img-inventario"  src="../libs/images/hospital_inventario.png">                   

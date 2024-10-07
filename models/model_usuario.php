@@ -7,7 +7,6 @@ class Model_Usuario extends conexionBD
   public function VerificarUsuario($email, $pass) {
       $con = conexionBD::conexion();
     
-      //$sql = "SELECT * FROM usuario WHERE email = ? AND estado = 'ACTIVO'";
       $sql = "SELECT * FROM usuario WHERE email = ?";
       $query = $con->prepare($sql);
       $query->bindParam(1, $email);
@@ -17,7 +16,7 @@ class Model_Usuario extends conexionBD
       if ($resultado) {
         foreach ($resultado as $email) {
           if (password_verify($pass, $email['pass_hash'])) {
-            return $email; // Devuelve los datos del email si está activo
+            return $email;
           }
         }
       } else {
@@ -52,8 +51,7 @@ class Model_Usuario extends conexionBD
   public function registrar_usuario($nombres, $email, $pass_hash, $rol, $pregunta, $respuesta) {
       $con = conexionBD::conexion();
       
-      $estado = 'ACTIVO'; // Definimos el estado por defecto como 'ACTIVO'
-      // Establecer el encabezado para indicar que se envía JSON
+      $estado = 'ACTIVO';
       header('Content-Type: application/json');
       
       // Verificar si ya existe un usuario con los mismos nombres y email
@@ -188,7 +186,6 @@ public function ActualizarContrasena($email, $nuevaContrasena) {
     // Cerrar la conexión a la base de datos
     conexionBD::cerrar_conexion();
 }
-
 
 }
 ?>

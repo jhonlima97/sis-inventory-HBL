@@ -226,7 +226,7 @@ function getGraficoParams1() {
             let cantidad = [];
             let colors = [];
             let data = JSON.parse(resp);
-            console.log(JSON.stringify(data));
+            //console.log(JSON.stringify(data));
             for (let i = 0; i < data.length; i++) {
                 //labels.push(data[i].new_responsable + ' (' + data[i].equipo + ')');
                 equipo.push(data[i].equipo);

@@ -1,15 +1,15 @@
 var contador = true;
 function vista() {
-    var passwordField = document.getElementById("txtPass");
-    var toggleButton = document.querySelector(".toggle-password");
+    var passwordInput = document.getElementById("txtPass");
+    var toggleIcon = document.querySelector(".toggle-password");
 
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleButton.classList.remove("fa-eye-slash");
-        toggleButton.classList.add("fa-eye");
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
     } else {
-        passwordField.type = "password";
-        toggleButton.classList.remove("fa-eye");
-        toggleButton.classList.add("fa-eye-slash");
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
     }
 }
