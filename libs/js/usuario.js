@@ -13,22 +13,16 @@ function Login() {
             p: pass
         }
     }).done(function (resp) {
-        console.log(resp);
         try {
             let data = JSON.parse(resp);
-
-            //validar que el usuario este activo
+            // console.log("Valor data", data);
             if(data && data.estado==='ACTIVO'){
                 redireccionarUsuario(data); //redirigirlo a la pantalla inicial 
-
-            }else if (data && data.error){ //manejar los errores en la respuesta a la consulta de la bd
-
+            }else if (data && data.error){
                 Swal.fire('Mensaje de Advertencia', data.mensaje, 'warning'); //Usuario inactivo o usuario no encontrado/contraseña 
             }else{
-
                 Swal.fire('Mensaje de Error', 'Respuesta inesperada del servidor', 'error');//errores de servidor
             }
-
         } catch (error) {
             // Error al parsear la respuesta JSON
             Swal.fire('Error', 'Ha ocurrido un error en el servidor', 'error');
@@ -57,7 +51,7 @@ function redireccionarUsuario(userData) {
         try {
             let response = JSON.parse(r); // Asegúrate de parsear la respuesta
             if (response.success) {
-                mostrarBienvenida(); // Solo se llama si la sesión fue creada correctamente
+                mostrarBienvenida();
             }
         } catch (error) {
             Swal.fire('Error', 'No se pudo procesar la respuesta del servidor', 'error');
@@ -66,7 +60,6 @@ function redireccionarUsuario(userData) {
         Swal.fire('Error', 'Error en la petición AJAX: ' + textStatus, 'error');
     });
 }
-
 
 function mostrarBienvenida() {
     let timerInterval;
@@ -92,7 +85,6 @@ function mostrarBienvenida() {
         }
     });
 }
-
 
 var tbl_usuarios;
 var idioma_espanol = {

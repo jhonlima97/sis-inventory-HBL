@@ -8,8 +8,9 @@ $(document).ready(function() {
 // Grafico tipo bar Vertical
 function getNumEquiposBar1() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
+        data: { accion: 'num_equipos' }
     }).done(function(resp) {
         if(resp.length>0) {
             let equipo   = [];
@@ -28,8 +29,9 @@ function getNumEquiposBar1() {
 // Grafico tipo bar Horizontal
 function getNumEquiposBar2() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
+        data: { accion: 'num_equipos' }
     }).done(function(resp) {
         if(resp.length>0) {
             let equipo = [];
@@ -50,8 +52,9 @@ function getNumEquiposBar2() {
 // Grafico Pastel tipo pie
 function getNumEquiposPie3() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
+        data: { accion: 'num_equipos' }
     }).done(function(resp) {
         if(resp.length>0) {
             let equipo   = [];
@@ -72,8 +75,9 @@ function getNumEquiposPie3() {
 // Grafico Pastel tipo doughnut
 function getNumEquiposPie4() {
     $.ajax({
-        url: '../controllers/graficos/num_equipos.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
+        data: { accion: 'num_equipos' }
     }).done(function(resp) {
         if(resp.length>0) {
             let equipo = [];
@@ -160,7 +164,6 @@ function CreateGrafico(equipo, cantidad, colors, type, indexAxis, header, chartI
 function generateNumber(number) {
     return (Math.random()*number).toFixed(0);
 }
-
 function colorRGB() {
     let coolors = "("+generateNumber(255)+"," + generateNumber(255) + "," + generateNumber(255) + ")";
     return "rgb" + coolors;
@@ -171,11 +174,11 @@ function colorRGB() {
 getAnio();
 function MostrarGraficosParams(){
     let anio = $("#select-anio").val();
-
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
         data:{
+            accion: 'grafico_params',
             anio: anio
         }
     }).done(function(resp) {
@@ -195,7 +198,6 @@ function MostrarGraficosParams(){
         }
     })
 }
-
 function getAnio() {
     let midate = new Date();
     let anio = midate.getFullYear();
@@ -209,11 +211,11 @@ function getAnio() {
 // Grafico tipo bar Vertical
 function getGraficoParams1() {
     let anio = $("#select-anio").val();
-
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
         data:{
+            accion: 'grafico_params',
             anio: anio
         }
     }).done(function(resp) {
@@ -236,15 +238,15 @@ function getGraficoParams1() {
         }   
     })
 }
-
 // Grafico Pastel  Desplazamientos
 function getGraficoParams2() {
     let anio = $("#select-anio").val();
 
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
         data:{
+            accion: 'grafico_params',
             anio: anio
         }
     }).done(function(resp) {
@@ -267,15 +269,14 @@ function getGraficoParams2() {
         }   
     })
 }
-
 // Grafico doughnut Desplazamientos
 function getGraficoParams3() {
     let anio = $("#select-anio").val();
-
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
         data:{
+            accion: 'grafico_params',
             anio: anio
         }
     }).done(function(resp) {
@@ -298,15 +299,14 @@ function getGraficoParams3() {
         }   
     })
 }
-
 // Grafico bar Horizontal Desplazamientos
 function getGraficoParams4() {
     let anio = $("#select-anio").val();
-
     $.ajax({
-        url: '../controllers/graficos/controller_param.php',
+        url: '../controllers/graficos/graficos_controller.php',
         type: 'POST',
         data:{
+            accion: 'grafico_params',
             anio: anio
         }
     }).done(function(resp) {

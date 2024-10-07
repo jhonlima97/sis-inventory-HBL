@@ -278,19 +278,19 @@ integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9
   }
 
   function togglePasswordVisibility() {
-    var passwordField = document.getElementById("txtPass");
-    var toggleButton = document.querySelector(".toggle-password");
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleButton.classList.remove("fa-eye-slash");
-        toggleButton.classList.add("fa-eye");
+    const passwordInput = document.getElementById('txtPass');
+    const toggleIcon = document.querySelector('.toggle-password');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
     } else {
-        passwordField.type = "password";
-        toggleButton.classList.remove("fa-eye");
-        toggleButton.classList.add("fa-eye-slash");
+        passwordInput.type = 'password';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
     }
   }
+
 
 </script>
 

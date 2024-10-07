@@ -18,10 +18,8 @@ class Model_Graficos extends conexionBD
             }
             return $resultadoArray;
         } catch (PDOException $e) {
-            // Lanza una excepción personalizada
             throw new Exception("Error en la consulta: " . $e->getMessage());
         } finally {
-            // Siempre cierra la conexión
             conexionBD::cerrar_conexion();
         }
     }
