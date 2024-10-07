@@ -1,5 +1,5 @@
 <?php
-
+//Bloqueo el retroceso en el navegador, cuando cierro sesion
 session_start();
 if (isset($_SESSION['S_ID'])) {
   header('Location: views/index.php');
@@ -220,6 +220,7 @@ if (isset($_SESSION['S_ID'])) {
     if (nuevaContrasena === confirmarContrasena) {
         return true; // Las contraseñas coinciden
     } else {
+
       Swal.fire({
           title: "Las contraseñas no coinciden",
           text: "Por favor, verifíquelas",
