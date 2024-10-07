@@ -6,8 +6,7 @@ function Login() {
         return Swal.fire('Mensaje de Advertencia', 'Ingrese los datos de sesión', 'warning');
     }
     $.ajax({
-
-        url:'http://localhost/inventario_belen/controllers/usuario/login.php',
+        url:'http://localhost/inventario_belen/sis-inventory-HBL/controllers/usuario/login.php',
         type: 'POST',
         data: {
             e: email,
@@ -44,8 +43,7 @@ function Login() {
 
 function redireccionarUsuario(userData) {
     $.ajax({
-        //url: 'http://localhost:8080/inventario_belen/controllers/usuario/crear_sesion.php',
-        url: 'http://localhost/inventario_belen/controllers/usuario/crear_sesion.php',
+        url: 'http://localhost/inventario_belen/sis-inventory-HBL/controllers/usuario/crear_sesion.php',
         type: 'POST',
         data: {
             id: userData.id,
@@ -56,19 +54,26 @@ function redireccionarUsuario(userData) {
             estado: userData.estado
         }
     }).done(function (r) {
-        // Redirecciona al dashboard u otras acciones luego de iniciar sesión
-        //console.log(userData);
-        // Resto de tu código para redireccionar o ejecutar acciones después del login exitoso
-        mostrarBienvenida();
+        try {
+            let response = JSON.parse(r); // Asegúrate de parsear la respuesta
+            if (response.success) {
+                mostrarBienvenida(); // Solo se llama si la sesión fue creada correctamente
+            }
+        } catch (error) {
+            Swal.fire('Error', 'No se pudo procesar la respuesta del servidor', 'error');
+        }
+    }).fail(function (jqXHR, textStatus) {
+        Swal.fire('Error', 'Error en la petición AJAX: ' + textStatus, 'error');
     });
 }
+
 
 function mostrarBienvenida() {
     let timerInterval;
     Swal.fire({
         title: 'Bienvenido al Sistema',
         html: 'Redireccionando en <b></b> milliseconds.',
-        timer: 400,
+        timer: 2000,
         timerProgressBar: true,
         allowOutsideClick: false,
         didOpen: () => {

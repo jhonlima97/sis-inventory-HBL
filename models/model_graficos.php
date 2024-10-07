@@ -16,7 +16,7 @@ class Model_Graficos extends conexionBD
             foreach ($resultado as $fila) {
                 $resultadoArray[] = $fila; // Aquí está la modificación
             }
-            return $resultadoArray; // Ahora devuelve directamente el array de equipos
+            return $resultadoArray;
         } catch (PDOException $e) {
             // Lanza una excepción personalizada
             throw new Exception("Error en la consulta: " . $e->getMessage());

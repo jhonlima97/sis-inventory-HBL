@@ -16,4 +16,7 @@
     $_SESSION['S_ROL']      = $rol;
     $_SESSION['S_ESTADO']   = $estado;
 
+    // Devolver una respuesta JSON
+    echo json_encode(['success' => true]);
+
 ?>

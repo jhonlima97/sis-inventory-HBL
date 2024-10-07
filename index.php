@@ -32,19 +32,26 @@ if (isset($_SESSION['S_ID'])) {
 <body class="body-wallpaper">
 
 <div class="container" id="loginForm">
-    <form onsubmit="event.preventDefault(); Login();" class="form">
+    <form onsubmit="Login(); return false;" class="form">
         <h2>Iniciar sesión</h2>
-        <input type="email" class="input" placeholder="Ingrese su email" id="txtEmail"  required>
+        
+        <!-- Campo de correo electrónico -->
+        <input type="email" class="input" placeholder="Ingrese su email" id="txtEmail" required>
+        
+        <!-- Campo de contraseña con opción para mostrar/ocultar -->
         <div class="input-container">
-            <!-- Agrega un contenedor adicional para el icono de ver contraseña -->
             <input type="password" class="input" placeholder="Ingrese su contraseña" id="txtPass" autocomplete="off" required>
-            <i class="fas fa-eye-slash toggle-password" onclick="togglePasswordVisibility()" style="color:grey;"></i>
+            <i class="fas fa-eye-slash toggle-password" onclick="togglePasswordVisibility()" style="cursor: pointer; color:grey;"></i>
         </div>
 
+        <!-- Enlace para recuperar contraseña -->
         <a href="#" onclick="mostrarFormulario('recuperar')">¿Olvidaste tu contraseña?</a>
-        
-        <button type="button" class="btn btn-primary" style="margin:5px;" onclick="Login()">INGRESAR</button>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn btn-primary" style="margin:5px;">INGRESAR</button>
     </form>
+
+    <!-- Video de fondo o lateral -->
     <div class="side" id="sideLogin">
         <video autoplay loop muted>
             <source src="libs/images/informatic2.mp4" type="video/mp4">
@@ -52,6 +59,7 @@ if (isset($_SESSION['S_ID'])) {
         </video>
     </div>
 </div>
+
 
 <div class="container" id="RecuperarForm" style="display: none;">
   <form class="form" onsubmit="event.preventDefault(); mostrarPreguntaSecreta();">
