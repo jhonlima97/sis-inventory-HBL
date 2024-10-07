@@ -5,10 +5,12 @@
 - Crea un archivo .env para tus credenciales
 
 ## Technologies applied:
-✅ PHP native version: 8.0.0 for backend logic  
+✅ PHP native version: 8.2.12 for backend logic  
 ✅ JavaScript for backend requests  
 ✅ Mysql database to store information  
 ✅ password_hash for password encryption  
 ✅ vlucas/phpdotenv to work with virtual environments  
 ✅ The MVC software design pattern was applied.  
 
+## Ramas
+- main: development  
